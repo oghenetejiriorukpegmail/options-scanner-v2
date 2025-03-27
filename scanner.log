@@ -1,0 +1,619 @@
+2025-03-26 18:08:46,102 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 18:08:47,526 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.11.2:8080
+2025-03-26 18:08:47,528 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 18:08:47,530 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 18:08:48,738 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 18:08:48,749 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 18:08:48,753 - werkzeug - INFO -  * Debugger PIN: 248-564-059
+2025-03-26 18:08:59,963 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 18:08:59] "GET / HTTP/1.1" 200 -
+2025-03-26 18:09:00,120 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 18:09:00] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-26 18:09:00,136 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 18:09:00] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-03-26 18:09:00,401 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 18:09:00] "GET /api/results HTTP/1.1" 200 -
+2025-03-26 18:09:06,887 - src.modules.scanner - INFO - Loading configuration from config.json
+2025-03-26 18:09:06,901 - src.modules.scanner - INFO - Fetching NASDAQ Composite constituents...
+2025-03-26 18:09:06,902 - src.modules.scanner - ERROR - Error fetching NASDAQ Composite symbols: 'Ticker' object has no attribute 'components'
+2025-03-26 18:09:06,903 - src.modules.scanner - WARNING - Symbols file nasdaq100_tickers.txt not found.
+2025-03-26 18:09:06,903 - src.modules.scanner - WARNING - Falling back to default hardcoded symbol list.
+2025-03-26 18:09:06,904 - src.modules.scanner - INFO - Starting scan for 7 symbols
+2025-03-26 18:09:06,904 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 18:09:06] "GET /api/scan?filters={"trend":["bullish","bearish","neutral"],"pcr_min":0,"pcr_max":2,"rsi_min":0,"rsi_max":100,"stoch_rsi_min":0,"stoch_rsi_max":100,"min_confidence":60} HTTP/1.1" 200 -
+2025-03-26 18:09:06,923 - src.modules.scanner - INFO - Analyzing AAPL
+2025-03-26 18:09:06,923 - src.modules.scanner - INFO - Analyzing MSFT
+2025-03-26 18:09:06,924 - src.modules.scanner - INFO - Analyzing GOOGL
+2025-03-26 18:09:06,925 - src.modules.scanner - INFO - Analyzing AMZN
+2025-03-26 18:09:06,926 - src.modules.scanner - INFO - Analyzing TSLA
+2025-03-26 18:09:11,165 - src.modules.scanner - INFO - Analyzing META
+2025-03-26 18:09:11,167 - src.modules.scanner - INFO - Added AMZN to results after passing filters.
+2025-03-26 18:09:11,175 - src.modules.scanner - INFO - Analyzing NVDA
+2025-03-26 18:09:11,199 - src.modules.scanner - INFO - Added MSFT to results after passing filters.
+2025-03-26 18:09:11,200 - src.modules.scanner - INFO - Added GOOGL to results after passing filters.
+2025-03-26 18:09:11,200 - src.modules.scanner - INFO - Added AAPL to results after passing filters.
+2025-03-26 18:09:11,202 - src.modules.scanner - INFO - Added TSLA to results after passing filters.
+2025-03-26 18:09:11,248 - src.modules.scanner - INFO - Added META to results after passing filters.
+2025-03-26 18:09:11,265 - src.modules.scanner - INFO - Added NVDA to results after passing filters.
+2025-03-26 18:09:11,267 - src.modules.scanner - INFO - Scan complete. Analyzed 7 symbols.
+2025-03-26 18:09:11,267 - src.modules.scanner - INFO - Found 7 setups after filtering.
+2025-03-26 18:09:11,271 - src.modules.scanner - INFO - Results saved to scanner_results\scan_results_20250326_180911.json
+2025-03-26 19:23:03,532 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 19:23:03,586 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.88.9:8080
+2025-03-26 19:23:03,588 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 19:23:03,590 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 19:23:04,816 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 19:23:04,831 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 19:23:04,836 - werkzeug - INFO -  * Debugger PIN: 248-564-059
+2025-03-26 19:23:13,165 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 19:23:13] "GET / HTTP/1.1" 200 -
+2025-03-26 19:23:13,488 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 19:23:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-03-26 19:23:13,493 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 19:23:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 19:23:13,531 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 19:23:13] "GET /api/results HTTP/1.1" 200 -
+2025-03-26 19:23:17,835 - src.modules.scanner - INFO - Loading configuration from config.json
+2025-03-26 19:23:17,837 - src.modules.scanner - INFO - Fetching NASDAQ Composite constituents...
+2025-03-26 19:23:17,839 - src.modules.scanner - ERROR - Error fetching NASDAQ Composite symbols: 'Ticker' object has no attribute 'components'
+2025-03-26 19:23:17,840 - src.modules.scanner - WARNING - Symbols file nasdaq100_tickers.txt not found.
+2025-03-26 19:23:17,840 - src.modules.scanner - WARNING - Falling back to default hardcoded symbol list.
+2025-03-26 19:23:17,842 - src.modules.scanner - INFO - Starting scan for 7 symbols
+2025-03-26 19:23:17,842 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 19:23:17] "GET /api/scan?filters={"trend":["bullish","bearish","neutral"],"pcr_min":0,"pcr_max":2,"rsi_min":0,"rsi_max":100,"stoch_rsi_min":0,"stoch_rsi_max":100,"min_confidence":60} HTTP/1.1" 200 -
+2025-03-26 19:23:17,850 - src.modules.scanner - INFO - Analyzing AAPL
+2025-03-26 19:23:17,851 - src.modules.scanner - INFO - Analyzing MSFT
+2025-03-26 19:23:17,854 - src.modules.scanner - INFO - Analyzing GOOGL
+2025-03-26 19:23:17,855 - src.modules.scanner - INFO - Analyzing AMZN
+2025-03-26 19:23:17,856 - src.modules.scanner - INFO - Analyzing TSLA
+2025-03-26 19:23:18,582 - src.modules.scanner - INFO - Analyzing META
+2025-03-26 19:23:18,614 - src.modules.scanner - INFO - Added AAPL to results after passing filters.
+2025-03-26 19:23:18,624 - src.modules.scanner - INFO - Analyzing NVDA
+2025-03-26 19:23:18,652 - src.modules.scanner - INFO - Added MSFT to results after passing filters.
+2025-03-26 19:23:18,653 - src.modules.scanner - INFO - Added AMZN to results after passing filters.
+2025-03-26 19:23:18,656 - src.modules.scanner - INFO - Added TSLA to results after passing filters.
+2025-03-26 19:23:18,657 - src.modules.scanner - INFO - Added GOOGL to results after passing filters.
+2025-03-26 19:23:18,726 - src.modules.scanner - INFO - Added META to results after passing filters.
+2025-03-26 19:23:18,755 - src.modules.scanner - INFO - Added NVDA to results after passing filters.
+2025-03-26 19:23:18,759 - src.modules.scanner - INFO - Scan complete. Analyzed 7 symbols.
+2025-03-26 19:23:18,760 - src.modules.scanner - INFO - Found 7 setups after filtering.
+2025-03-26 19:23:18,768 - src.modules.scanner - INFO - Results saved to scanner_results\scan_results_20250326_192318.json
+2025-03-26 19:40:23,265 - werkzeug - INFO -  * Detected change in 'C:\\Users\\cciep\\Github\\APPs\\dynamic-nasdaq-scanner\\src\\modules\\scanner.py', reloading
+2025-03-26 19:40:23,448 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 21:08:17,171 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 21:08:17,216 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.88.9:8080
+2025-03-26 21:08:17,217 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 21:08:17,220 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 21:08:18,306 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 21:08:18,319 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 21:08:18,323 - werkzeug - INFO -  * Debugger PIN: 463-917-157
+2025-03-26 21:08:21,254 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 21:08:21] "GET / HTTP/1.1" 200 -
+2025-03-26 21:08:21,371 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 21:08:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 21:08:21,395 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 21:08:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-03-26 21:08:21,700 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 21:08:21] "GET /api/results HTTP/1.1" 200 -
+2025-03-26 21:08:54,747 - src.modules.scanner - INFO - Loading configuration from config.json
+2025-03-26 21:08:54,750 - src.modules.scanner - INFO - Starting scan for 7 symbols
+2025-03-26 21:08:54,750 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 21:08:54] "GET /api/scan?filters={"trend":["bullish","bearish","neutral"],"pcr_min":0,"pcr_max":2,"rsi_min":0,"rsi_max":100,"stoch_rsi_min":0,"stoch_rsi_max":100,"min_confidence":60} HTTP/1.1" 200 -
+2025-03-26 21:08:55,252 - src.modules.scanner - INFO - Processing AAPL... (1/7)
+2025-03-26 21:08:56,141 - src.modules.scanner - INFO - Fetched price for AAPL: $221.53
+2025-03-26 21:08:56,142 - src.modules.scanner - INFO - Generated bullish setup for AAPL with 91.9% confidence at $221.53
+2025-03-26 21:08:56,143 - src.modules.scanner - INFO - Added AAPL to results
+2025-03-26 21:08:56,644 - src.modules.scanner - INFO - Processing MSFT... (2/7)
+2025-03-26 21:08:56,858 - src.modules.scanner - INFO - Fetched price for MSFT: $389.97
+2025-03-26 21:08:56,859 - src.modules.scanner - INFO - Generated bullish setup for MSFT with 65.6% confidence at $389.97
+2025-03-26 21:08:56,860 - src.modules.scanner - INFO - Added MSFT to results
+2025-03-26 21:08:57,362 - src.modules.scanner - INFO - Processing GOOGL... (3/7)
+2025-03-26 21:08:57,537 - src.modules.scanner - INFO - Fetched price for GOOGL: $165.06
+2025-03-26 21:08:57,538 - src.modules.scanner - INFO - Generated bullish setup for GOOGL with 77.2% confidence at $165.06
+2025-03-26 21:08:57,539 - src.modules.scanner - INFO - Added GOOGL to results
+2025-03-26 21:08:58,040 - src.modules.scanner - INFO - Processing AMZN... (4/7)
+2025-03-26 21:08:58,213 - src.modules.scanner - INFO - Fetched price for AMZN: $201.13
+2025-03-26 21:08:58,214 - src.modules.scanner - INFO - Generated bullish setup for AMZN with 82.1% confidence at $201.13
+2025-03-26 21:08:58,214 - src.modules.scanner - INFO - Added AMZN to results
+2025-03-26 21:08:58,716 - src.modules.scanner - INFO - Processing TSLA... (5/7)
+2025-03-26 21:08:58,889 - src.modules.scanner - INFO - Fetched price for TSLA: $272.06
+2025-03-26 21:08:58,890 - src.modules.scanner - INFO - Generated bullish setup for TSLA with 71.9% confidence at $272.06
+2025-03-26 21:08:58,890 - src.modules.scanner - INFO - Added TSLA to results
+2025-03-26 21:08:59,391 - src.modules.scanner - INFO - Processing META... (6/7)
+2025-03-26 21:08:59,564 - src.modules.scanner - INFO - Fetched price for META: $610.98
+2025-03-26 21:08:59,565 - src.modules.scanner - INFO - Generated neutral setup for META with 84.9% confidence at $610.98
+2025-03-26 21:08:59,566 - src.modules.scanner - INFO - Added META to results
+2025-03-26 21:09:00,068 - src.modules.scanner - INFO - Processing NVDA... (7/7)
+2025-03-26 21:09:00,275 - src.modules.scanner - INFO - Fetched price for NVDA: $113.76
+2025-03-26 21:09:00,276 - src.modules.scanner - INFO - Generated bullish setup for NVDA with 84.8% confidence at $113.76
+2025-03-26 21:09:00,277 - src.modules.scanner - INFO - Added NVDA to results
+2025-03-26 21:09:00,278 - src.modules.scanner - INFO - Pre-filter results count: 7
+2025-03-26 21:09:00,278 - src.modules.scanner - INFO - Post-filter results count: 7
+2025-03-26 21:09:00,283 - src.modules.scanner - INFO - Results saved to scanner_results\scan_results_20250326_210900.json
+2025-03-26 21:09:00,284 - src.modules.scanner - INFO - Scan complete. Found 7 setups after filtering.
+2025-03-26 21:13:31,714 - src.modules.scanner - INFO - Loading configuration from config.json
+2025-03-26 21:13:31,716 - src.modules.scanner - INFO - Starting scan for 106 symbols
+2025-03-26 21:13:31,717 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 21:13:31] "GET /api/scan?filters={"trend":["bullish","bearish","neutral"],"pcr_min":0,"pcr_max":2,"rsi_min":0,"rsi_max":100,"stoch_rsi_min":0,"stoch_rsi_max":100,"min_confidence":60} HTTP/1.1" 200 -
+2025-03-26 21:13:32,219 - src.modules.scanner - INFO - Processing AAPL... (1/106)
+2025-03-26 21:13:32,538 - src.modules.scanner - INFO - Fetched price for AAPL: $221.53
+2025-03-26 21:13:32,539 - src.modules.scanner - INFO - Generated neutral setup for AAPL with 66.3% confidence at $221.53
+2025-03-26 21:13:32,540 - src.modules.scanner - INFO - Added AAPL to results
+2025-03-26 21:13:33,041 - src.modules.scanner - INFO - Processing ABNB... (2/106)
+2025-03-26 21:13:33,216 - src.modules.scanner - INFO - Fetched price for ABNB: $128.64
+2025-03-26 21:13:33,218 - src.modules.scanner - INFO - Generated bearish setup for ABNB with 86.3% confidence at $128.64
+2025-03-26 21:13:33,219 - src.modules.scanner - INFO - Added ABNB to results
+2025-03-26 21:13:33,720 - src.modules.scanner - INFO - Processing ADBE... (3/106)
+2025-03-26 21:13:33,912 - src.modules.scanner - INFO - Fetched price for ADBE: $397.81
+2025-03-26 21:13:33,913 - src.modules.scanner - INFO - Generated bearish setup for ADBE with 85.1% confidence at $397.81
+2025-03-26 21:13:33,913 - src.modules.scanner - INFO - Added ADBE to results
+2025-03-26 21:13:34,415 - src.modules.scanner - INFO - Processing ADI... (4/106)
+2025-03-26 21:13:34,626 - src.modules.scanner - INFO - Fetched price for ADI: $210.53
+2025-03-26 21:13:34,628 - src.modules.scanner - INFO - Generated neutral setup for ADI with 76.7% confidence at $210.53
+2025-03-26 21:13:34,629 - src.modules.scanner - INFO - Added ADI to results
+2025-03-26 21:13:35,130 - src.modules.scanner - INFO - Processing ADP... (5/106)
+2025-03-26 21:13:35,384 - src.modules.scanner - INFO - Fetched price for ADP: $302.41
+2025-03-26 21:13:35,385 - src.modules.scanner - INFO - Generated bearish setup for ADP with 78.8% confidence at $302.41
+2025-03-26 21:13:35,385 - src.modules.scanner - INFO - Added ADP to results
+2025-03-26 21:13:35,887 - src.modules.scanner - INFO - Processing ADSK... (6/106)
+2025-03-26 21:13:36,086 - src.modules.scanner - INFO - Fetched price for ADSK: $271.21
+2025-03-26 21:13:36,087 - src.modules.scanner - INFO - Generated neutral setup for ADSK with 86.7% confidence at $271.21
+2025-03-26 21:13:36,088 - src.modules.scanner - INFO - Added ADSK to results
+2025-03-26 21:13:36,589 - src.modules.scanner - INFO - Processing AEP... (7/106)
+2025-03-26 21:13:36,853 - src.modules.scanner - INFO - Fetched price for AEP: $103.90
+2025-03-26 21:13:36,854 - src.modules.scanner - INFO - Generated neutral setup for AEP with 73.1% confidence at $103.90
+2025-03-26 21:13:36,854 - src.modules.scanner - INFO - Added AEP to results
+2025-03-26 21:13:37,355 - src.modules.scanner - INFO - Processing AMAT... (8/106)
+2025-03-26 21:13:37,551 - src.modules.scanner - INFO - Fetched price for AMAT: $150.68
+2025-03-26 21:13:37,552 - src.modules.scanner - INFO - Generated bullish setup for AMAT with 81.0% confidence at $150.68
+2025-03-26 21:13:37,553 - src.modules.scanner - INFO - Added AMAT to results
+2025-03-26 21:13:38,055 - src.modules.scanner - INFO - Processing AMD... (9/106)
+2025-03-26 21:13:38,224 - src.modules.scanner - INFO - Fetched price for AMD: $110.19
+2025-03-26 21:13:38,226 - src.modules.scanner - INFO - Generated bearish setup for AMD with 62.6% confidence at $110.19
+2025-03-26 21:13:38,227 - src.modules.scanner - INFO - Added AMD to results
+2025-03-26 21:13:38,728 - src.modules.scanner - INFO - Processing AMGN... (10/106)
+2025-03-26 21:13:38,928 - src.modules.scanner - INFO - Fetched price for AMGN: $305.71
+2025-03-26 21:13:38,929 - src.modules.scanner - INFO - Generated neutral setup for AMGN with 68.9% confidence at $305.71
+2025-03-26 21:13:38,930 - src.modules.scanner - INFO - Added AMGN to results
+2025-03-26 21:13:39,431 - src.modules.scanner - INFO - Processing AMZN... (11/106)
+2025-03-26 21:13:39,602 - src.modules.scanner - INFO - Fetched price for AMZN: $201.13
+2025-03-26 21:13:39,603 - src.modules.scanner - INFO - Generated neutral setup for AMZN with 69.0% confidence at $201.13
+2025-03-26 21:13:39,604 - src.modules.scanner - INFO - Added AMZN to results
+2025-03-26 21:13:40,105 - src.modules.scanner - INFO - Processing ANSS... (12/106)
+2025-03-26 21:13:40,278 - src.modules.scanner - INFO - Fetched price for ANSS: $323.34
+2025-03-26 21:13:40,279 - src.modules.scanner - INFO - Generated bullish setup for ANSS with 85.3% confidence at $323.34
+2025-03-26 21:13:40,280 - src.modules.scanner - INFO - Added ANSS to results
+2025-03-26 21:13:40,781 - src.modules.scanner - INFO - Processing APP... (13/106)
+2025-03-26 21:13:40,957 - src.modules.scanner - INFO - Fetched price for APP: $327.62
+2025-03-26 21:13:40,958 - src.modules.scanner - INFO - Generated bearish setup for APP with 71.6% confidence at $327.62
+2025-03-26 21:13:40,958 - src.modules.scanner - INFO - Added APP to results
+2025-03-26 21:13:41,459 - src.modules.scanner - INFO - Processing ARM... (14/106)
+2025-03-26 21:13:41,633 - src.modules.scanner - INFO - Fetched price for ARM: $114.93
+2025-03-26 21:13:41,634 - src.modules.scanner - INFO - Generated bullish setup for ARM with 80.7% confidence at $114.93
+2025-03-26 21:13:41,636 - src.modules.scanner - INFO - Added ARM to results
+2025-03-26 21:13:42,137 - src.modules.scanner - INFO - Processing ASML... (15/106)
+2025-03-26 21:13:42,324 - src.modules.scanner - INFO - Fetched price for ASML: $705.76
+2025-03-26 21:13:42,325 - src.modules.scanner - INFO - Generated neutral setup for ASML with 68.1% confidence at $705.76
+2025-03-26 21:13:42,326 - src.modules.scanner - INFO - Added ASML to results
+2025-03-26 21:13:42,827 - src.modules.scanner - INFO - Processing ATVI... (16/106)
+2025-03-26 21:13:44,937 - yfinance - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ATVI?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=ATVI&crumb=NvnzxTYzQTj
+2025-03-26 21:13:44,938 - src.modules.scanner - ERROR - Error getting price data for ATVI: 'NoneType' object has no attribute 'update'
+2025-03-26 21:13:45,439 - src.modules.scanner - INFO - Processing AVGO... (17/106)
+2025-03-26 21:13:45,630 - src.modules.scanner - INFO - Fetched price for AVGO: $179.27
+2025-03-26 21:13:45,631 - src.modules.scanner - INFO - Generated bullish setup for AVGO with 89.7% confidence at $179.27
+2025-03-26 21:13:45,632 - src.modules.scanner - INFO - Added AVGO to results
+2025-03-26 21:13:46,133 - src.modules.scanner - INFO - Processing AXON... (18/106)
+2025-03-26 21:13:46,308 - src.modules.scanner - INFO - Fetched price for AXON: $559.06
+2025-03-26 21:13:46,309 - src.modules.scanner - INFO - Generated bullish setup for AXON with 94.2% confidence at $559.06
+2025-03-26 21:13:46,310 - src.modules.scanner - INFO - Added AXON to results
+2025-03-26 21:13:46,811 - src.modules.scanner - INFO - Processing AZN... (19/106)
+2025-03-26 21:13:47,048 - src.modules.scanner - INFO - Fetched price for AZN: $72.72
+2025-03-26 21:13:47,049 - src.modules.scanner - INFO - Generated neutral setup for AZN with 74.7% confidence at $72.72
+2025-03-26 21:13:47,050 - src.modules.scanner - INFO - Added AZN to results
+2025-03-26 21:13:47,551 - src.modules.scanner - INFO - Processing BIIB... (20/106)
+2025-03-26 21:13:47,736 - src.modules.scanner - INFO - Fetched price for BIIB: $142.43
+2025-03-26 21:13:47,737 - src.modules.scanner - INFO - Generated bullish setup for BIIB with 62.0% confidence at $142.43
+2025-03-26 21:13:47,737 - src.modules.scanner - INFO - Added BIIB to results
+2025-03-26 21:13:48,238 - src.modules.scanner - INFO - Processing BKNG... (21/106)
+2025-03-26 21:13:48,416 - src.modules.scanner - INFO - Fetched price for BKNG: $4764.16
+2025-03-26 21:13:48,417 - src.modules.scanner - INFO - Generated bearish setup for BKNG with 80.2% confidence at $4764.16
+2025-03-26 21:13:48,418 - src.modules.scanner - INFO - Added BKNG to results
+2025-03-26 21:13:48,919 - src.modules.scanner - INFO - Processing BKR... (22/106)
+2025-03-26 21:13:49,147 - src.modules.scanner - INFO - Fetched price for BKR: $44.02
+2025-03-26 21:13:49,148 - src.modules.scanner - INFO - Generated bullish setup for BKR with 93.3% confidence at $44.02
+2025-03-26 21:13:49,148 - src.modules.scanner - INFO - Added BKR to results
+2025-03-26 21:13:49,650 - src.modules.scanner - INFO - Processing CCEP... (23/106)
+2025-03-26 21:13:49,888 - src.modules.scanner - INFO - Fetched price for CCEP: $85.37
+2025-03-26 21:13:49,889 - src.modules.scanner - INFO - Generated bearish setup for CCEP with 91.4% confidence at $85.37
+2025-03-26 21:13:49,890 - src.modules.scanner - INFO - Added CCEP to results
+2025-03-26 21:13:50,391 - src.modules.scanner - INFO - Processing CDNS... (24/106)
+2025-03-26 21:13:50,564 - src.modules.scanner - INFO - Fetched price for CDNS: $263.41
+2025-03-26 21:13:50,565 - src.modules.scanner - INFO - Generated bullish setup for CDNS with 87.1% confidence at $263.41
+2025-03-26 21:13:50,566 - src.modules.scanner - INFO - Added CDNS to results
+2025-03-26 21:13:51,068 - src.modules.scanner - INFO - Processing CDW... (25/106)
+2025-03-26 21:13:51,258 - src.modules.scanner - INFO - Fetched price for CDW: $167.33
+2025-03-26 21:13:51,259 - src.modules.scanner - INFO - Generated bullish setup for CDW with 60.4% confidence at $167.33
+2025-03-26 21:13:51,259 - src.modules.scanner - INFO - Added CDW to results
+2025-03-26 21:13:51,760 - src.modules.scanner - INFO - Processing CEG... (26/106)
+2025-03-26 21:13:51,933 - src.modules.scanner - INFO - Fetched price for CEG: $216.97
+2025-03-26 21:13:51,934 - src.modules.scanner - INFO - Generated bullish setup for CEG with 60.0% confidence at $216.97
+2025-03-26 21:13:51,935 - src.modules.scanner - INFO - Added CEG to results
+2025-03-26 21:13:52,437 - src.modules.scanner - INFO - Processing CHTR... (27/106)
+2025-03-26 21:13:52,610 - src.modules.scanner - INFO - Fetched price for CHTR: $384.77
+2025-03-26 21:13:52,611 - src.modules.scanner - INFO - Generated bearish setup for CHTR with 92.6% confidence at $384.77
+2025-03-26 21:13:52,612 - src.modules.scanner - INFO - Added CHTR to results
+2025-03-26 21:13:53,113 - src.modules.scanner - INFO - Processing CMCSA... (28/106)
+2025-03-26 21:13:53,348 - src.modules.scanner - INFO - Fetched price for CMCSA: $37.37
+2025-03-26 21:13:53,349 - src.modules.scanner - INFO - Generated bearish setup for CMCSA with 66.4% confidence at $37.37
+2025-03-26 21:13:53,350 - src.modules.scanner - INFO - Added CMCSA to results
+2025-03-26 21:13:53,851 - src.modules.scanner - INFO - Processing COST... (29/106)
+2025-03-26 21:13:54,052 - src.modules.scanner - INFO - Fetched price for COST: $929.75
+2025-03-26 21:13:54,053 - src.modules.scanner - INFO - Generated neutral setup for COST with 72.0% confidence at $929.75
+2025-03-26 21:13:54,053 - src.modules.scanner - INFO - Added COST to results
+2025-03-26 21:13:54,555 - src.modules.scanner - INFO - Processing CPRT... (30/106)
+2025-03-26 21:13:54,725 - src.modules.scanner - INFO - Fetched price for CPRT: $55.07
+2025-03-26 21:13:54,725 - src.modules.scanner - INFO - Generated bullish setup for CPRT with 93.6% confidence at $55.07
+2025-03-26 21:13:54,726 - src.modules.scanner - INFO - Added CPRT to results
+2025-03-26 21:13:55,228 - src.modules.scanner - INFO - Processing CRWD... (31/106)
+2025-03-26 21:13:55,408 - src.modules.scanner - INFO - Fetched price for CRWD: $371.41
+2025-03-26 21:13:55,409 - src.modules.scanner - INFO - Generated bullish setup for CRWD with 83.6% confidence at $371.41
+2025-03-26 21:13:55,410 - src.modules.scanner - INFO - Added CRWD to results
+2025-03-26 21:13:55,911 - src.modules.scanner - INFO - Processing CSCO... (32/106)
+2025-03-26 21:13:56,112 - src.modules.scanner - INFO - Fetched price for CSCO: $61.80
+2025-03-26 21:13:56,113 - src.modules.scanner - INFO - Generated bullish setup for CSCO with 94.5% confidence at $61.80
+2025-03-26 21:13:56,114 - src.modules.scanner - INFO - Added CSCO to results
+2025-03-26 21:13:56,616 - src.modules.scanner - INFO - Processing CSGP... (33/106)
+2025-03-26 21:13:56,799 - src.modules.scanner - INFO - Fetched price for CSGP: $80.37
+2025-03-26 21:13:56,800 - src.modules.scanner - INFO - Generated neutral setup for CSGP with 69.8% confidence at $80.37
+2025-03-26 21:13:56,802 - src.modules.scanner - INFO - Added CSGP to results
+2025-03-26 21:13:57,303 - src.modules.scanner - INFO - Processing CSX... (34/106)
+2025-03-26 21:13:57,520 - src.modules.scanner - INFO - Fetched price for CSX: $29.90
+2025-03-26 21:13:57,521 - src.modules.scanner - INFO - Generated bullish setup for CSX with 66.6% confidence at $29.90
+2025-03-26 21:13:57,522 - src.modules.scanner - INFO - Added CSX to results
+2025-03-26 21:13:58,023 - src.modules.scanner - INFO - Processing CTAS... (35/106)
+2025-03-26 21:13:58,240 - src.modules.scanner - INFO - Fetched price for CTAS: $204.71
+2025-03-26 21:13:58,241 - src.modules.scanner - INFO - Generated bullish setup for CTAS with 69.4% confidence at $204.71
+2025-03-26 21:13:58,242 - src.modules.scanner - INFO - Added CTAS to results
+2025-03-26 21:13:58,744 - src.modules.scanner - INFO - Processing CTSH... (36/106)
+2025-03-26 21:13:58,931 - src.modules.scanner - INFO - Fetched price for CTSH: $77.85
+2025-03-26 21:13:58,932 - src.modules.scanner - INFO - Generated bullish setup for CTSH with 78.3% confidence at $77.85
+2025-03-26 21:13:58,933 - src.modules.scanner - INFO - Added CTSH to results
+2025-03-26 21:13:59,434 - src.modules.scanner - INFO - Processing DASH... (37/106)
+2025-03-26 21:13:59,606 - src.modules.scanner - INFO - Fetched price for DASH: $192.87
+2025-03-26 21:13:59,607 - src.modules.scanner - INFO - Generated bearish setup for DASH with 92.9% confidence at $192.87
+2025-03-26 21:13:59,608 - src.modules.scanner - INFO - Added DASH to results
+2025-03-26 21:14:00,109 - src.modules.scanner - INFO - Processing DDOG... (38/106)
+2025-03-26 21:14:00,282 - src.modules.scanner - INFO - Fetched price for DDOG: $107.97
+2025-03-26 21:14:00,283 - src.modules.scanner - INFO - Generated neutral setup for DDOG with 93.6% confidence at $107.97
+2025-03-26 21:14:00,284 - src.modules.scanner - INFO - Added DDOG to results
+2025-03-26 21:14:00,785 - src.modules.scanner - INFO - Processing DXCM... (39/106)
+2025-03-26 21:14:00,958 - src.modules.scanner - INFO - Fetched price for DXCM: $72.13
+2025-03-26 21:14:00,959 - src.modules.scanner - INFO - Generated neutral setup for DXCM with 93.4% confidence at $72.13
+2025-03-26 21:14:00,959 - src.modules.scanner - INFO - Added DXCM to results
+2025-03-26 21:14:01,461 - src.modules.scanner - INFO - Processing EA... (40/106)
+2025-03-26 21:14:01,649 - src.modules.scanner - INFO - Fetched price for EA: $145.19
+2025-03-26 21:14:01,650 - src.modules.scanner - INFO - Generated neutral setup for EA with 85.3% confidence at $145.19
+2025-03-26 21:14:01,651 - src.modules.scanner - INFO - Added EA to results
+2025-03-26 21:14:02,152 - src.modules.scanner - INFO - Processing EXC... (41/106)
+2025-03-26 21:14:02,400 - src.modules.scanner - INFO - Fetched price for EXC: $44.02
+2025-03-26 21:14:02,401 - src.modules.scanner - INFO - Generated bearish setup for EXC with 68.0% confidence at $44.02
+2025-03-26 21:14:02,402 - src.modules.scanner - INFO - Added EXC to results
+2025-03-26 21:14:02,903 - src.modules.scanner - INFO - Processing FANG... (42/106)
+2025-03-26 21:14:03,085 - src.modules.scanner - INFO - Fetched price for FANG: $163.09
+2025-03-26 21:14:03,086 - src.modules.scanner - INFO - Generated neutral setup for FANG with 88.6% confidence at $163.09
+2025-03-26 21:14:03,087 - src.modules.scanner - INFO - Added FANG to results
+2025-03-26 21:14:03,588 - src.modules.scanner - INFO - Processing FAST... (43/106)
+2025-03-26 21:14:03,799 - src.modules.scanner - INFO - Fetched price for FAST: $77.09
+2025-03-26 21:14:03,801 - src.modules.scanner - INFO - Generated bullish setup for FAST with 85.6% confidence at $77.09
+2025-03-26 21:14:03,801 - src.modules.scanner - INFO - Added FAST to results
+2025-03-26 21:14:04,303 - src.modules.scanner - INFO - Processing FTNT... (44/106)
+2025-03-26 21:14:04,486 - src.modules.scanner - INFO - Fetched price for FTNT: $101.01
+2025-03-26 21:14:04,487 - src.modules.scanner - INFO - Generated neutral setup for FTNT with 91.7% confidence at $101.01
+2025-03-26 21:14:04,488 - src.modules.scanner - INFO - Added FTNT to results
+2025-03-26 21:14:04,990 - src.modules.scanner - INFO - Processing GEHC... (45/106)
+2025-03-26 21:14:05,176 - src.modules.scanner - INFO - Fetched price for GEHC: $81.00
+2025-03-26 21:14:05,177 - src.modules.scanner - INFO - Generated bullish setup for GEHC with 61.2% confidence at $81.00
+2025-03-26 21:14:05,178 - src.modules.scanner - INFO - Added GEHC to results
+2025-03-26 21:14:05,679 - src.modules.scanner - INFO - Processing GFS... (46/106)
+2025-03-26 21:14:05,876 - src.modules.scanner - INFO - Fetched price for GFS: $38.75
+2025-03-26 21:14:05,877 - src.modules.scanner - INFO - Generated neutral setup for GFS with 73.0% confidence at $38.75
+2025-03-26 21:14:05,878 - src.modules.scanner - INFO - Added GFS to results
+2025-03-26 21:14:06,379 - src.modules.scanner - INFO - Processing GILD... (47/106)
+2025-03-26 21:14:06,568 - src.modules.scanner - INFO - Fetched price for GILD: $109.27
+2025-03-26 21:14:06,569 - src.modules.scanner - INFO - Generated bullish setup for GILD with 63.0% confidence at $109.27
+2025-03-26 21:14:06,570 - src.modules.scanner - INFO - Added GILD to results
+2025-03-26 21:14:07,071 - src.modules.scanner - INFO - Processing GOOG... (48/106)
+2025-03-26 21:14:07,245 - src.modules.scanner - INFO - Fetched price for GOOG: $167.14
+2025-03-26 21:14:07,247 - src.modules.scanner - INFO - Generated neutral setup for GOOG with 80.2% confidence at $167.14
+2025-03-26 21:14:07,248 - src.modules.scanner - INFO - Added GOOG to results
+2025-03-26 21:14:07,749 - src.modules.scanner - INFO - Processing GOOGL... (49/106)
+2025-03-26 21:14:07,929 - src.modules.scanner - INFO - Fetched price for GOOGL: $165.06
+2025-03-26 21:14:07,930 - src.modules.scanner - INFO - Generated bullish setup for GOOGL with 87.3% confidence at $165.06
+2025-03-26 21:14:07,931 - src.modules.scanner - INFO - Added GOOGL to results
+2025-03-26 21:14:08,432 - src.modules.scanner - INFO - Processing HON... (50/106)
+2025-03-26 21:14:08,685 - src.modules.scanner - INFO - Fetched price for HON: $213.12
+2025-03-26 21:14:08,686 - src.modules.scanner - INFO - Generated neutral setup for HON with 66.1% confidence at $213.12
+2025-03-26 21:14:08,687 - src.modules.scanner - INFO - Added HON to results
+2025-03-26 21:14:09,188 - src.modules.scanner - INFO - Processing IDXX... (51/106)
+2025-03-26 21:14:09,366 - src.modules.scanner - INFO - Fetched price for IDXX: $417.71
+2025-03-26 21:14:09,367 - src.modules.scanner - INFO - Generated neutral setup for IDXX with 90.8% confidence at $417.71
+2025-03-26 21:14:09,368 - src.modules.scanner - INFO - Added IDXX to results
+2025-03-26 21:14:09,869 - src.modules.scanner - INFO - Processing INTC... (52/106)
+2025-03-26 21:14:10,086 - src.modules.scanner - INFO - Fetched price for INTC: $23.42
+2025-03-26 21:14:10,088 - src.modules.scanner - INFO - Generated bearish setup for INTC with 90.8% confidence at $23.42
+2025-03-26 21:14:10,088 - src.modules.scanner - INFO - Added INTC to results
+2025-03-26 21:14:10,590 - src.modules.scanner - INFO - Processing INTU... (53/106)
+2025-03-26 21:14:10,775 - src.modules.scanner - INFO - Fetched price for INTU: $614.86
+2025-03-26 21:14:10,776 - src.modules.scanner - INFO - Generated bearish setup for INTU with 77.7% confidence at $614.86
+2025-03-26 21:14:10,776 - src.modules.scanner - INFO - Added INTU to results
+2025-03-26 21:14:11,278 - src.modules.scanner - INFO - Processing ISRG... (54/106)
+2025-03-26 21:14:11,459 - src.modules.scanner - INFO - Fetched price for ISRG: $509.03
+2025-03-26 21:14:11,460 - src.modules.scanner - INFO - Generated neutral setup for ISRG with 86.5% confidence at $509.03
+2025-03-26 21:14:11,461 - src.modules.scanner - INFO - Added ISRG to results
+2025-03-26 21:14:11,962 - src.modules.scanner - INFO - Processing JD... (55/106)
+2025-03-26 21:14:12,133 - src.modules.scanner - INFO - Fetched price for JD: $41.78
+2025-03-26 21:14:12,134 - src.modules.scanner - INFO - Generated neutral setup for JD with 70.6% confidence at $41.78
+2025-03-26 21:14:12,135 - src.modules.scanner - INFO - Added JD to results
+2025-03-26 21:14:12,636 - src.modules.scanner - INFO - Processing KDP... (56/106)
+2025-03-26 21:14:12,822 - src.modules.scanner - INFO - Fetched price for KDP: $34.06
+2025-03-26 21:14:12,822 - src.modules.scanner - INFO - Generated bearish setup for KDP with 90.8% confidence at $34.06
+2025-03-26 21:14:12,823 - src.modules.scanner - INFO - Added KDP to results
+2025-03-26 21:14:13,324 - src.modules.scanner - INFO - Processing KHC... (57/106)
+2025-03-26 21:14:13,517 - src.modules.scanner - INFO - Fetched price for KHC: $29.69
+2025-03-26 21:14:13,518 - src.modules.scanner - INFO - Generated neutral setup for KHC with 69.5% confidence at $29.69
+2025-03-26 21:14:13,519 - src.modules.scanner - INFO - Added KHC to results
+2025-03-26 21:14:14,020 - src.modules.scanner - INFO - Processing KLAC... (58/106)
+2025-03-26 21:14:14,227 - src.modules.scanner - INFO - Fetched price for KLAC: $705.54
+2025-03-26 21:14:14,228 - src.modules.scanner - INFO - Generated bearish setup for KLAC with 90.9% confidence at $705.54
+2025-03-26 21:14:14,229 - src.modules.scanner - INFO - Added KLAC to results
+2025-03-26 21:14:14,731 - src.modules.scanner - INFO - Processing LIN... (59/106)
+2025-03-26 21:14:14,941 - src.modules.scanner - INFO - Fetched price for LIN: $461.43
+2025-03-26 21:14:14,942 - src.modules.scanner - INFO - Generated bullish setup for LIN with 94.2% confidence at $461.43
+2025-03-26 21:14:14,942 - src.modules.scanner - INFO - Added LIN to results
+2025-03-26 21:14:15,443 - src.modules.scanner - INFO - Processing LRCX... (60/106)
+2025-03-26 21:14:15,621 - src.modules.scanner - INFO - Fetched price for LRCX: $76.14
+2025-03-26 21:14:15,621 - src.modules.scanner - INFO - Generated bullish setup for LRCX with 94.8% confidence at $76.14
+2025-03-26 21:14:15,622 - src.modules.scanner - INFO - Added LRCX to results
+2025-03-26 21:14:16,123 - src.modules.scanner - INFO - Processing LULU... (61/106)
+2025-03-26 21:14:16,297 - src.modules.scanner - INFO - Fetched price for LULU: $337.79
+2025-03-26 21:14:16,298 - src.modules.scanner - INFO - Generated bullish setup for LULU with 77.5% confidence at $337.79
+2025-03-26 21:14:16,299 - src.modules.scanner - INFO - Added LULU to results
+2025-03-26 21:14:16,800 - src.modules.scanner - INFO - Processing MAR... (62/106)
+2025-03-26 21:14:17,020 - src.modules.scanner - INFO - Fetched price for MAR: $246.72
+2025-03-26 21:14:17,022 - src.modules.scanner - INFO - Generated neutral setup for MAR with 62.3% confidence at $246.72
+2025-03-26 21:14:17,023 - src.modules.scanner - INFO - Added MAR to results
+2025-03-26 21:14:17,524 - src.modules.scanner - INFO - Processing MCHP... (63/106)
+2025-03-26 21:14:17,720 - src.modules.scanner - INFO - Fetched price for MCHP: $52.17
+2025-03-26 21:14:17,721 - src.modules.scanner - INFO - Generated bearish setup for MCHP with 83.5% confidence at $52.17
+2025-03-26 21:14:17,721 - src.modules.scanner - INFO - Added MCHP to results
+2025-03-26 21:14:18,222 - src.modules.scanner - INFO - Processing MDB... (64/106)
+2025-03-26 21:14:18,397 - src.modules.scanner - INFO - Fetched price for MDB: $193.66
+2025-03-26 21:14:18,398 - src.modules.scanner - INFO - Generated bearish setup for MDB with 93.8% confidence at $193.66
+2025-03-26 21:14:18,399 - src.modules.scanner - INFO - Added MDB to results
+2025-03-26 21:14:18,900 - src.modules.scanner - INFO - Processing MDLZ... (65/106)
+2025-03-26 21:14:19,096 - src.modules.scanner - INFO - Fetched price for MDLZ: $66.33
+2025-03-26 21:14:19,097 - src.modules.scanner - INFO - Generated bullish setup for MDLZ with 68.8% confidence at $66.33
+2025-03-26 21:14:19,098 - src.modules.scanner - INFO - Added MDLZ to results
+2025-03-26 21:14:19,599 - src.modules.scanner - INFO - Processing MELI... (66/106)
+2025-03-26 21:14:19,783 - src.modules.scanner - INFO - Fetched price for MELI: $2074.97
+2025-03-26 21:14:19,784 - src.modules.scanner - INFO - Generated bullish setup for MELI with 77.4% confidence at $2074.97
+2025-03-26 21:14:19,784 - src.modules.scanner - INFO - Added MELI to results
+2025-03-26 21:14:20,286 - src.modules.scanner - INFO - Processing META... (67/106)
+2025-03-26 21:14:20,460 - src.modules.scanner - INFO - Fetched price for META: $610.98
+2025-03-26 21:14:20,461 - src.modules.scanner - INFO - Generated bearish setup for META with 69.7% confidence at $610.98
+2025-03-26 21:14:20,462 - src.modules.scanner - INFO - Added META to results
+2025-03-26 21:14:20,963 - src.modules.scanner - INFO - Processing MNST... (68/106)
+2025-03-26 21:14:21,139 - src.modules.scanner - INFO - Fetched price for MNST: $57.76
+2025-03-26 21:14:21,140 - src.modules.scanner - INFO - Generated bearish setup for MNST with 72.9% confidence at $57.76
+2025-03-26 21:14:21,141 - src.modules.scanner - INFO - Added MNST to results
+2025-03-26 21:14:21,642 - src.modules.scanner - INFO - Processing MRNA... (69/106)
+2025-03-26 21:14:21,816 - src.modules.scanner - INFO - Fetched price for MRNA: $31.48
+2025-03-26 21:14:21,817 - src.modules.scanner - INFO - Generated bearish setup for MRNA with 76.0% confidence at $31.48
+2025-03-26 21:14:21,818 - src.modules.scanner - INFO - Added MRNA to results
+2025-03-26 21:14:22,319 - src.modules.scanner - INFO - Processing MRVL... (70/106)
+2025-03-26 21:14:22,506 - src.modules.scanner - INFO - Fetched price for MRVL: $66.76
+2025-03-26 21:14:22,507 - src.modules.scanner - INFO - Generated neutral setup for MRVL with 89.1% confidence at $66.76
+2025-03-26 21:14:22,508 - src.modules.scanner - INFO - Added MRVL to results
+2025-03-26 21:14:23,009 - src.modules.scanner - INFO - Processing MSFT... (71/106)
+2025-03-26 21:14:23,218 - src.modules.scanner - INFO - Fetched price for MSFT: $389.97
+2025-03-26 21:14:23,219 - src.modules.scanner - INFO - Generated bearish setup for MSFT with 76.5% confidence at $389.97
+2025-03-26 21:14:23,221 - src.modules.scanner - INFO - Added MSFT to results
+2025-03-26 21:14:23,721 - src.modules.scanner - INFO - Processing MSTR... (72/106)
+2025-03-26 21:14:23,903 - src.modules.scanner - INFO - Fetched price for MSTR: $329.31
+2025-03-26 21:14:23,905 - src.modules.scanner - INFO - Generated neutral setup for MSTR with 85.8% confidence at $329.31
+2025-03-26 21:14:23,906 - src.modules.scanner - INFO - Added MSTR to results
+2025-03-26 21:14:24,407 - src.modules.scanner - INFO - Processing MU... (73/106)
+2025-03-26 21:14:24,626 - src.modules.scanner - INFO - Fetched price for MU: $92.13
+2025-03-26 21:14:24,627 - src.modules.scanner - INFO - Generated bullish setup for MU with 94.3% confidence at $92.13
+2025-03-26 21:14:24,628 - src.modules.scanner - INFO - Added MU to results
+2025-03-26 21:14:25,129 - src.modules.scanner - INFO - Processing NFLX... (74/106)
+2025-03-26 21:14:25,301 - src.modules.scanner - INFO - Fetched price for NFLX: $970.65
+2025-03-26 21:14:25,302 - src.modules.scanner - INFO - Generated bearish setup for NFLX with 90.6% confidence at $970.65
+2025-03-26 21:14:25,303 - src.modules.scanner - INFO - Added NFLX to results
+2025-03-26 21:14:25,805 - src.modules.scanner - INFO - Processing NVDA... (75/106)
+2025-03-26 21:14:25,999 - src.modules.scanner - INFO - Fetched price for NVDA: $113.76
+2025-03-26 21:14:26,000 - src.modules.scanner - INFO - Generated neutral setup for NVDA with 82.6% confidence at $113.76
+2025-03-26 21:14:26,001 - src.modules.scanner - INFO - Added NVDA to results
+2025-03-26 21:14:26,502 - src.modules.scanner - INFO - Processing NXPI... (76/106)
+2025-03-26 21:14:26,682 - src.modules.scanner - INFO - Fetched price for NXPI: $205.75
+2025-03-26 21:14:26,683 - src.modules.scanner - INFO - Generated bearish setup for NXPI with 80.3% confidence at $205.75
+2025-03-26 21:14:26,683 - src.modules.scanner - INFO - Added NXPI to results
+2025-03-26 21:14:27,185 - src.modules.scanner - INFO - Processing ODFL... (77/106)
+2025-03-26 21:14:27,374 - src.modules.scanner - INFO - Fetched price for ODFL: $168.67
+2025-03-26 21:14:27,376 - src.modules.scanner - INFO - Generated neutral setup for ODFL with 69.6% confidence at $168.67
+2025-03-26 21:14:27,376 - src.modules.scanner - INFO - Added ODFL to results
+2025-03-26 21:14:27,878 - src.modules.scanner - INFO - Processing ON... (78/106)
+2025-03-26 21:14:28,056 - src.modules.scanner - INFO - Fetched price for ON: $45.04
+2025-03-26 21:14:28,057 - src.modules.scanner - INFO - Generated bullish setup for ON with 88.0% confidence at $45.04
+2025-03-26 21:14:28,058 - src.modules.scanner - INFO - Added ON to results
+2025-03-26 21:14:28,559 - src.modules.scanner - INFO - Processing ORLY... (79/106)
+2025-03-26 21:14:28,731 - src.modules.scanner - INFO - Fetched price for ORLY: $1380.98
+2025-03-26 21:14:28,733 - src.modules.scanner - INFO - Generated bullish setup for ORLY with 86.7% confidence at $1380.98
+2025-03-26 21:14:28,733 - src.modules.scanner - INFO - Added ORLY to results
+2025-03-26 21:14:29,235 - src.modules.scanner - INFO - Processing PANW... (80/106)
+2025-03-26 21:14:29,404 - src.modules.scanner - INFO - Fetched price for PANW: $184.96
+2025-03-26 21:14:29,405 - src.modules.scanner - INFO - Generated bullish setup for PANW with 62.1% confidence at $184.96
+2025-03-26 21:14:29,407 - src.modules.scanner - INFO - Added PANW to results
+2025-03-26 21:14:29,907 - src.modules.scanner - INFO - Processing PAYX... (81/106)
+2025-03-26 21:14:30,130 - src.modules.scanner - INFO - Fetched price for PAYX: $150.19
+2025-03-26 21:14:30,131 - src.modules.scanner - INFO - Generated bearish setup for PAYX with 69.7% confidence at $150.19
+2025-03-26 21:14:30,132 - src.modules.scanner - INFO - Added PAYX to results
+2025-03-26 21:14:30,633 - src.modules.scanner - INFO - Processing PCAR... (82/106)
+2025-03-26 21:14:30,859 - src.modules.scanner - INFO - Fetched price for PCAR: $99.53
+2025-03-26 21:14:30,860 - src.modules.scanner - INFO - Generated bearish setup for PCAR with 70.0% confidence at $99.53
+2025-03-26 21:14:30,861 - src.modules.scanner - INFO - Added PCAR to results
+2025-03-26 21:14:31,362 - src.modules.scanner - INFO - Processing PDD... (83/106)
+2025-03-26 21:14:31,532 - src.modules.scanner - INFO - Fetched price for PDD: $122.47
+2025-03-26 21:14:31,533 - src.modules.scanner - INFO - Generated bearish setup for PDD with 79.6% confidence at $122.47
+2025-03-26 21:14:31,534 - src.modules.scanner - INFO - Added PDD to results
+2025-03-26 21:14:32,035 - src.modules.scanner - INFO - Processing PEP... (84/106)
+2025-03-26 21:14:32,251 - src.modules.scanner - INFO - Fetched price for PEP: $148.64
+2025-03-26 21:14:32,252 - src.modules.scanner - INFO - Generated bearish setup for PEP with 93.0% confidence at $148.64
+2025-03-26 21:14:32,253 - src.modules.scanner - INFO - Added PEP to results
+2025-03-26 21:14:32,754 - src.modules.scanner - INFO - Processing PLTR... (85/106)
+2025-03-26 21:14:32,928 - src.modules.scanner - INFO - Fetched price for PLTR: $92.28
+2025-03-26 21:14:32,929 - src.modules.scanner - INFO - Generated bullish setup for PLTR with 74.3% confidence at $92.28
+2025-03-26 21:14:32,930 - src.modules.scanner - INFO - Added PLTR to results
+2025-03-26 21:14:33,431 - src.modules.scanner - INFO - Processing PYPL... (86/106)
+2025-03-26 21:14:33,604 - src.modules.scanner - INFO - Fetched price for PYPL: $69.97
+2025-03-26 21:14:33,605 - src.modules.scanner - INFO - Generated neutral setup for PYPL with 68.4% confidence at $69.97
+2025-03-26 21:14:33,607 - src.modules.scanner - INFO - Added PYPL to results
+2025-03-26 21:14:34,108 - src.modules.scanner - INFO - Processing QCOM... (87/106)
+2025-03-26 21:14:34,317 - src.modules.scanner - INFO - Fetched price for QCOM: $158.39
+2025-03-26 21:14:34,318 - src.modules.scanner - INFO - Generated bullish setup for QCOM with 89.1% confidence at $158.39
+2025-03-26 21:14:34,319 - src.modules.scanner - INFO - Added QCOM to results
+2025-03-26 21:14:34,820 - src.modules.scanner - INFO - Processing REGN... (88/106)
+2025-03-26 21:14:34,994 - src.modules.scanner - INFO - Fetched price for REGN: $640.14
+2025-03-26 21:14:34,995 - src.modules.scanner - INFO - Generated neutral setup for REGN with 89.9% confidence at $640.14
+2025-03-26 21:14:34,996 - src.modules.scanner - INFO - Added REGN to results
+2025-03-26 21:14:35,497 - src.modules.scanner - INFO - Processing ROP... (89/106)
+2025-03-26 21:14:35,711 - src.modules.scanner - INFO - Fetched price for ROP: $582.71
+2025-03-26 21:14:35,712 - src.modules.scanner - INFO - Generated bullish setup for ROP with 78.2% confidence at $582.71
+2025-03-26 21:14:35,713 - src.modules.scanner - INFO - Added ROP to results
+2025-03-26 21:14:36,214 - src.modules.scanner - INFO - Processing ROST... (90/106)
+2025-03-26 21:14:36,427 - src.modules.scanner - INFO - Fetched price for ROST: $127.70
+2025-03-26 21:14:36,428 - src.modules.scanner - INFO - Generated neutral setup for ROST with 78.0% confidence at $127.70
+2025-03-26 21:14:36,429 - src.modules.scanner - INFO - Added ROST to results
+2025-03-26 21:14:36,929 - src.modules.scanner - INFO - Processing SBUX... (91/106)
+2025-03-26 21:14:37,114 - src.modules.scanner - INFO - Fetched price for SBUX: $97.97
+2025-03-26 21:14:37,115 - src.modules.scanner - INFO - Generated bullish setup for SBUX with 93.0% confidence at $97.97
+2025-03-26 21:14:37,116 - src.modules.scanner - INFO - Added SBUX to results
+2025-03-26 21:14:37,617 - src.modules.scanner - INFO - Processing SIRI... (92/106)
+2025-03-26 21:14:37,815 - src.modules.scanner - INFO - Fetched price for SIRI: $23.95
+2025-03-26 21:14:37,816 - src.modules.scanner - INFO - Generated bearish setup for SIRI with 79.4% confidence at $23.95
+2025-03-26 21:14:37,817 - src.modules.scanner - INFO - Added SIRI to results
+2025-03-26 21:14:38,319 - src.modules.scanner - INFO - Processing SNPS... (93/106)
+2025-03-26 21:14:38,495 - src.modules.scanner - INFO - Fetched price for SNPS: $449.90
+2025-03-26 21:14:38,496 - src.modules.scanner - INFO - Generated bearish setup for SNPS with 61.6% confidence at $449.90
+2025-03-26 21:14:38,496 - src.modules.scanner - INFO - Added SNPS to results
+2025-03-26 21:14:38,998 - src.modules.scanner - INFO - Processing TEAM... (94/106)
+2025-03-26 21:14:39,174 - src.modules.scanner - INFO - Fetched price for TEAM: $229.65
+2025-03-26 21:14:39,175 - src.modules.scanner - INFO - Generated bearish setup for TEAM with 81.1% confidence at $229.65
+2025-03-26 21:14:39,176 - src.modules.scanner - INFO - Added TEAM to results
+2025-03-26 21:14:39,677 - src.modules.scanner - INFO - Processing TMUS... (95/106)
+2025-03-26 21:14:39,860 - src.modules.scanner - INFO - Fetched price for TMUS: $262.51
+2025-03-26 21:14:39,861 - src.modules.scanner - INFO - Generated bearish setup for TMUS with 90.1% confidence at $262.51
+2025-03-26 21:14:39,861 - src.modules.scanner - INFO - Added TMUS to results
+2025-03-26 21:14:40,363 - src.modules.scanner - INFO - Processing TSLA... (96/106)
+2025-03-26 21:14:40,531 - src.modules.scanner - INFO - Fetched price for TSLA: $272.06
+2025-03-26 21:14:40,532 - src.modules.scanner - INFO - Generated bullish setup for TSLA with 61.2% confidence at $272.06
+2025-03-26 21:14:40,533 - src.modules.scanner - INFO - Added TSLA to results
+2025-03-26 21:14:41,034 - src.modules.scanner - INFO - Processing TTD... (97/106)
+2025-03-26 21:14:41,207 - src.modules.scanner - INFO - Fetched price for TTD: $58.80
+2025-03-26 21:14:41,208 - src.modules.scanner - INFO - Generated bearish setup for TTD with 62.2% confidence at $58.80
+2025-03-26 21:14:41,209 - src.modules.scanner - INFO - Added TTD to results
+2025-03-26 21:14:41,710 - src.modules.scanner - INFO - Processing TTWO... (98/106)
+2025-03-26 21:14:42,068 - src.modules.scanner - INFO - Fetched price for TTWO: $215.89
+2025-03-26 21:14:42,069 - src.modules.scanner - INFO - Generated bearish setup for TTWO with 86.6% confidence at $215.89
+2025-03-26 21:14:42,070 - src.modules.scanner - INFO - Added TTWO to results
+2025-03-26 21:14:42,571 - src.modules.scanner - INFO - Processing TXN... (99/106)
+2025-03-26 21:14:42,830 - src.modules.scanner - INFO - Fetched price for TXN: $184.49
+2025-03-26 21:14:42,831 - src.modules.scanner - INFO - Generated bullish setup for TXN with 81.9% confidence at $184.49
+2025-03-26 21:14:42,832 - src.modules.scanner - INFO - Added TXN to results
+2025-03-26 21:14:43,333 - src.modules.scanner - INFO - Processing VRSK... (100/106)
+2025-03-26 21:14:43,515 - src.modules.scanner - INFO - Fetched price for VRSK: $292.03
+2025-03-26 21:14:43,516 - src.modules.scanner - INFO - Generated neutral setup for VRSK with 71.6% confidence at $292.03
+2025-03-26 21:14:43,517 - src.modules.scanner - INFO - Added VRSK to results
+2025-03-26 21:14:44,018 - src.modules.scanner - INFO - Processing VRTX... (101/106)
+2025-03-26 21:14:44,195 - src.modules.scanner - INFO - Fetched price for VRTX: $500.28
+2025-03-26 21:14:44,196 - src.modules.scanner - INFO - Generated bearish setup for VRTX with 88.7% confidence at $500.28
+2025-03-26 21:14:44,196 - src.modules.scanner - INFO - Added VRTX to results
+2025-03-26 21:14:44,698 - src.modules.scanner - INFO - Processing WBD... (102/106)
+2025-03-26 21:14:44,871 - src.modules.scanner - INFO - Fetched price for WBD: $11.03
+2025-03-26 21:14:44,872 - src.modules.scanner - INFO - Generated bullish setup for WBD with 82.6% confidence at $11.03
+2025-03-26 21:14:44,872 - src.modules.scanner - INFO - Added WBD to results
+2025-03-26 21:14:45,374 - src.modules.scanner - INFO - Processing WDAY... (103/106)
+2025-03-26 21:14:45,540 - src.modules.scanner - INFO - Fetched price for WDAY: $250.79
+2025-03-26 21:14:45,540 - src.modules.scanner - INFO - Generated bearish setup for WDAY with 61.5% confidence at $250.79
+2025-03-26 21:14:45,541 - src.modules.scanner - INFO - Added WDAY to results
+2025-03-26 21:14:46,042 - src.modules.scanner - INFO - Processing XEL... (104/106)
+2025-03-26 21:14:46,295 - src.modules.scanner - INFO - Fetched price for XEL: $68.92
+2025-03-26 21:14:46,296 - src.modules.scanner - INFO - Generated bullish setup for XEL with 92.6% confidence at $68.92
+2025-03-26 21:14:46,297 - src.modules.scanner - INFO - Added XEL to results
+2025-03-26 21:14:46,798 - src.modules.scanner - INFO - Processing ZM... (105/106)
+2025-03-26 21:14:46,974 - src.modules.scanner - INFO - Fetched price for ZM: $77.78
+2025-03-26 21:14:46,975 - src.modules.scanner - INFO - Generated bullish setup for ZM with 72.1% confidence at $77.78
+2025-03-26 21:14:46,975 - src.modules.scanner - INFO - Added ZM to results
+2025-03-26 21:14:47,477 - src.modules.scanner - INFO - Processing ZS... (106/106)
+2025-03-26 21:14:47,646 - src.modules.scanner - INFO - Fetched price for ZS: $211.55
+2025-03-26 21:14:47,647 - src.modules.scanner - INFO - Generated neutral setup for ZS with 94.7% confidence at $211.55
+2025-03-26 21:14:47,648 - src.modules.scanner - INFO - Added ZS to results
+2025-03-26 21:14:47,649 - src.modules.scanner - INFO - Pre-filter results count: 105
+2025-03-26 21:14:47,650 - src.modules.scanner - INFO - Post-filter results count: 105
+2025-03-26 21:14:47,686 - src.modules.scanner - INFO - Results saved to scanner_results\scan_results_20250326_211447.json
+2025-03-26 21:14:47,687 - src.modules.scanner - INFO - Scan complete. Found 105 setups after filtering.
+2025-03-26 21:15:04,693 - src.modules.scanner - INFO - Loading configuration from config.json
+2025-03-26 21:15:04,694 - src.modules.scanner - INFO - Analyzing AAPL
+2025-03-26 21:15:04,869 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 21:15:04] "GET /api/analyze/AAPL HTTP/1.1" 200 -
+2025-03-26 22:50:45,128 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 22:50:45,259 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.88.9:8080
+2025-03-26 22:50:45,260 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 22:50:45,264 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 22:50:46,567 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 22:50:46,585 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 22:50:46,595 - werkzeug - INFO -  * Debugger PIN: 463-917-157
+2025-03-26 22:50:49,709 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 22:50:49] "GET / HTTP/1.1" 200 -
+2025-03-26 22:50:49,837 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 22:50:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 22:50:49,850 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 22:50:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-03-26 22:50:50,036 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 22:50:50] "GET /api/results HTTP/1.1" 200 -
+2025-03-26 22:50:56,892 - src.modules.scanner - INFO - Loading configuration from config.json
+2025-03-26 22:50:56,915 - src.modules.scanner - ERROR - Error fetching NASDAQ constituents: name 'requests' is not defined
+2025-03-26 22:50:56,917 - src.modules.scanner - ERROR - Failed to load NASDAQ constituents: name 'requests' is not defined
+2025-03-26 22:50:56,918 - src.modules.scanner - WARNING - Using hardcoded fallback symbols
+2025-03-26 22:50:56,920 - src.modules.scanner - INFO - Starting scan for 7 symbols
+2025-03-26 22:50:56,920 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 22:50:56] "GET /api/scan?filters={"trend":["bullish","bearish","neutral"],"pcr_min":0,"pcr_max":2,"rsi_min":0,"rsi_max":100,"stoch_rsi_min":0,"stoch_rsi_max":100,"min_confidence":60} HTTP/1.1" 200 -
+2025-03-26 22:50:57,422 - src.modules.scanner - INFO - Processing AAPL... (1/7)
+2025-03-26 22:51:03,921 - src.modules.scanner - INFO - Fetched price for AAPL: $221.53
+2025-03-26 22:51:03,922 - src.modules.scanner - INFO - Generated neutral setup for AAPL with 73.6% confidence at $221.53
+2025-03-26 22:51:03,923 - src.modules.scanner - INFO - Added AAPL to results
+2025-03-26 22:51:04,424 - src.modules.scanner - INFO - Processing MSFT... (2/7)
+2025-03-26 22:51:04,629 - src.modules.scanner - INFO - Fetched price for MSFT: $389.97
+2025-03-26 22:51:04,630 - src.modules.scanner - INFO - Generated bullish setup for MSFT with 86.7% confidence at $389.97
+2025-03-26 22:51:04,631 - src.modules.scanner - INFO - Added MSFT to results
+2025-03-26 22:51:05,133 - src.modules.scanner - INFO - Processing GOOGL... (3/7)
+2025-03-26 22:51:05,303 - src.modules.scanner - INFO - Fetched price for GOOGL: $165.06
+2025-03-26 22:51:05,304 - src.modules.scanner - INFO - Generated bullish setup for GOOGL with 82.2% confidence at $165.06
+2025-03-26 22:51:05,305 - src.modules.scanner - INFO - Added GOOGL to results
+2025-03-26 22:51:05,806 - src.modules.scanner - INFO - Processing AMZN... (4/7)
+2025-03-26 22:51:05,989 - src.modules.scanner - INFO - Fetched price for AMZN: $201.13
+2025-03-26 22:51:05,990 - src.modules.scanner - INFO - Generated neutral setup for AMZN with 73.8% confidence at $201.13
+2025-03-26 22:51:05,991 - src.modules.scanner - INFO - Added AMZN to results
+2025-03-26 22:51:06,492 - src.modules.scanner - INFO - Processing TSLA... (5/7)
+2025-03-26 22:51:06,674 - src.modules.scanner - INFO - Fetched price for TSLA: $272.06
+2025-03-26 22:51:06,675 - src.modules.scanner - INFO - Generated bullish setup for TSLA with 94.6% confidence at $272.06
+2025-03-26 22:51:06,676 - src.modules.scanner - INFO - Added TSLA to results
+2025-03-26 22:51:07,177 - src.modules.scanner - INFO - Processing META... (6/7)
+2025-03-26 22:51:07,375 - src.modules.scanner - INFO - Fetched price for META: $610.98
+2025-03-26 22:51:07,376 - src.modules.scanner - INFO - Generated bullish setup for META with 70.5% confidence at $610.98
+2025-03-26 22:51:07,379 - src.modules.scanner - INFO - Added META to results
+2025-03-26 22:51:07,881 - src.modules.scanner - INFO - Processing NVDA... (7/7)
+2025-03-26 22:51:08,101 - src.modules.scanner - INFO - Fetched price for NVDA: $113.76
+2025-03-26 22:51:08,102 - src.modules.scanner - INFO - Generated bearish setup for NVDA with 74.7% confidence at $113.76
+2025-03-26 22:51:08,103 - src.modules.scanner - INFO - Added NVDA to results
+2025-03-26 22:51:08,104 - src.modules.scanner - INFO - Pre-filter results count: 7
+2025-03-26 22:51:08,105 - src.modules.scanner - INFO - Post-filter results count: 7
+2025-03-26 22:51:08,113 - src.modules.scanner - INFO - Results saved to scanner_results\scan_results_20250326_225108.json
+2025-03-26 22:51:08,114 - src.modules.scanner - INFO - Scan complete. Found 7 setups after filtering.
+2025-03-26 22:52:56,609 - werkzeug - INFO -  * Detected change in 'C:\\Users\\cciep\\Github\\APPs\\dynamic-nasdaq-scanner\\src\\modules\\scanner.py', reloading
+2025-03-26 22:52:56,771 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 22:52:58,033 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 22:52:58,045 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 22:52:58,048 - werkzeug - INFO -  * Debugger PIN: 463-917-157
+2025-03-26 22:53:57,263 - werkzeug - INFO -  * Detected change in 'C:\\Users\\cciep\\Github\\APPs\\dynamic-nasdaq-scanner\\src\\modules\\scanner.py', reloading
+2025-03-26 22:53:57,444 - werkzeug - INFO -  * Restarting with stat

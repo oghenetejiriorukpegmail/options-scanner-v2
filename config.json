@@ -1,0 +1,15 @@
+{
+  "max_workers": 5,
+  "filters": {
+    "trend": ["bullish", "bearish", "neutral"],
+    "pcr_min": 0,
+    "pcr_max": 2,
+    "rsi_min": 0,
+    "rsi_max": 100,
+    "stoch_rsi_min": 0,
+    "stoch_rsi_max": 100,
+    "min_confidence": 20
+  },
+  "output_dir": "scanner_results",
+  "fmp_api_key": "O2REndZGRE2gZZCf2gU9xBjdjboP18yY"
+}

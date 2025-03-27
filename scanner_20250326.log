@@ -1,0 +1,122 @@
+2025-03-26 20:14:18,540 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:14:18,683 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.88.9:8080
+2025-03-26 20:14:18,684 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 20:14:18,706 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 20:14:19,955 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:14:19,972 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 20:14:19,977 - werkzeug - INFO -  * Debugger PIN: 463-917-157
+2025-03-26 20:14:38,317 - werkzeug - INFO - 192.168.88.9 - - [26/Mar/2025 20:14:38] "GET / HTTP/1.1" 200 -
+2025-03-26 20:14:38,413 - werkzeug - INFO - 192.168.88.9 - - [26/Mar/2025 20:14:38] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-26 20:14:38,415 - werkzeug - INFO - 192.168.88.9 - - [26/Mar/2025 20:14:38] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-03-26 20:14:38,688 - werkzeug - INFO - 192.168.88.9 - - [26/Mar/2025 20:14:38] "GET /api/results HTTP/1.1" 200 -
+2025-03-26 20:14:38,763 - werkzeug - INFO - 192.168.88.9 - - [26/Mar/2025 20:14:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-26 20:14:43,548 - werkzeug - INFO - 192.168.88.9 - - [26/Mar/2025 20:14:43] "GET /api/scan?filters={"trend":["bullish","bearish","neutral"],"pcr_min":0,"pcr_max":2,"rsi_min":0,"rsi_max":100,"stoch_rsi_min":0,"stoch_rsi_max":100,"min_confidence":60} HTTP/1.1" 200 -
+2025-03-26 20:15:48,027 - werkzeug - INFO - 192.168.88.9 - - [26/Mar/2025 20:15:48] "GET /api/analyze/AAPL HTTP/1.1" 200 -
+2025-03-26 20:16:10,512 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:16:10,513 - src.modules.scanner - INFO - Starting market scan
+2025-03-26 20:16:11,117 - src.modules.scanner - ERROR - Error scanning PTPI: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/PTPI?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:11,391 - src.modules.scanner - ERROR - Error scanning OCEA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/OCEA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:11,650 - src.modules.scanner - ERROR - Error scanning LYT: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/LYT?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:11,920 - src.modules.scanner - ERROR - Error scanning NVDA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/NVDA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:12,178 - src.modules.scanner - ERROR - Error scanning TSLL: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/TSLL?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:12,468 - src.modules.scanner - ERROR - Error scanning DGLY: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/DGLY?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:12,744 - src.modules.scanner - ERROR - Error scanning DMN: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/DMN?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:13,034 - src.modules.scanner - ERROR - Error scanning TSLA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/TSLA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:13,386 - src.modules.scanner - ERROR - Error scanning VVPR: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/VVPR?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:16:13,644 - src.modules.scanner - ERROR - Error scanning F: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/F?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:29,322 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:20:29,323 - src.modules.scanner - INFO - Starting market scan
+2025-03-26 20:20:30,886 - src.modules.scanner - ERROR - Error scanning PTPI: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/PTPI?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:31,161 - src.modules.scanner - ERROR - Error scanning OCEA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/OCEA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:31,439 - src.modules.scanner - ERROR - Error scanning LYT: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/LYT?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:31,704 - src.modules.scanner - ERROR - Error scanning NVDA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/NVDA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:31,989 - src.modules.scanner - ERROR - Error scanning TSLL: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/TSLL?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:32,288 - src.modules.scanner - ERROR - Error scanning DGLY: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/DGLY?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:32,693 - src.modules.scanner - ERROR - Error scanning DMN: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/DMN?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:33,065 - src.modules.scanner - ERROR - Error scanning TSLA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/TSLA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:33,362 - src.modules.scanner - ERROR - Error scanning VVPR: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/VVPR?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:20:33,710 - src.modules.scanner - ERROR - Error scanning F: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/F?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:07,351 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:42:07,354 - src.modules.scanner - INFO - Starting market scan
+2025-03-26 20:42:08,075 - src.modules.scanner - ERROR - Error scanning PTPI: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/PTPI?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:08,358 - src.modules.scanner - ERROR - Error scanning OCEA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/OCEA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:08,627 - src.modules.scanner - ERROR - Error scanning LYT: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/LYT?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:08,895 - src.modules.scanner - ERROR - Error scanning NVDA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/NVDA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:09,272 - src.modules.scanner - ERROR - Error scanning TSLL: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/TSLL?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:09,541 - src.modules.scanner - ERROR - Error scanning DGLY: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/DGLY?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:09,811 - src.modules.scanner - ERROR - Error scanning DMN: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/DMN?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:10,066 - src.modules.scanner - ERROR - Error scanning TSLA: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/TSLA?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:10,319 - src.modules.scanner - ERROR - Error scanning VVPR: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/VVPR?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:42:10,598 - src.modules.scanner - ERROR - Error scanning F: 401 Client Error: Unauthorized for url: https://financialmodelingprep.com/api/v3/technical_indicator/daily/F?period=10&amp;type=ema&amp;apikey=O2REndZGRE2gZZCf2gU9xBjdjboP18yY
+2025-03-26 20:48:44,856 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:48:44,857 - src.modules.scanner - INFO - Starting market scan
+2025-03-26 20:48:45,438 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for PTPI
+2025-03-26 20:48:45,940 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for OCEA
+2025-03-26 20:48:46,489 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for LYT
+2025-03-26 20:48:47,028 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for NVDA
+2025-03-26 20:48:47,602 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for TSLL
+2025-03-26 20:48:48,113 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for DGLY
+2025-03-26 20:48:48,708 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for DMN
+2025-03-26 20:48:49,256 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for TSLA
+2025-03-26 20:48:49,958 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for VVPR
+2025-03-26 20:48:50,477 - src.modules.scanner - WARNING - API key doesn't have access to technical indicators for F
+2025-03-26 20:50:09,326 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:50:09,372 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.88.9:8080
+2025-03-26 20:50:09,373 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 20:50:09,375 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 20:50:10,473 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:50:10,486 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 20:50:10,493 - werkzeug - INFO -  * Debugger PIN: 463-917-157
+2025-03-26 20:50:29,788 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:50:29] "GET / HTTP/1.1" 200 -
+2025-03-26 20:50:29,873 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:50:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 20:50:29,876 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:50:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-03-26 20:50:30,076 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:50:30] "GET /api/results HTTP/1.1" 200 -
+2025-03-26 20:50:40,668 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:50:40] "GET /api/scan?filters={"trend":["bullish","bearish","neutral"],"pcr_min":0,"pcr_max":2,"rsi_min":0,"rsi_max":100,"stoch_rsi_min":0,"stoch_rsi_max":100,"min_confidence":60} HTTP/1.1" 200 -
+2025-03-26 20:53:08,560 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:53:08,591 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.88.9:8080
+2025-03-26 20:53:08,591 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 20:53:08,592 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 20:53:09,693 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:53:09,710 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 20:53:09,713 - werkzeug - INFO -  * Debugger PIN: 463-917-157
+2025-03-26 20:53:26,636 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:53:26] "GET / HTTP/1.1" 200 -
+2025-03-26 20:53:26,845 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:53:26] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-26 20:53:26,876 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:53:26] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-03-26 20:53:27,209 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:53:27] "GET /api/results HTTP/1.1" 200 -
+2025-03-26 20:53:34,865 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:53:34] "GET /api/analyze/AAPL HTTP/1.1" 200 -
+2025-03-26 20:55:17,471 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:55:17,496 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.88.9:8080
+2025-03-26 20:55:17,497 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 20:55:17,498 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 20:55:18,618 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:55:18,629 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 20:55:18,634 - werkzeug - INFO -  * Debugger PIN: 463-917-157
+2025-03-26 20:55:24,904 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:55:24] "GET / HTTP/1.1" 200 -
+2025-03-26 20:55:24,990 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:55:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 20:55:25,149 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:55:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-03-26 20:55:25,463 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:55:25] "GET /api/results HTTP/1.1" 200 -
+2025-03-26 20:55:54,506 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:55:54] "GET /api/analyze/AAPL HTTP/1.1" 200 -
+2025-03-26 20:56:05,477 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:56:05] "GET /api/analyze/AAPL HTTP/1.1" 200 -
+2025-03-26 20:58:38,263 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:58:38,293 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.88.9:8080
+2025-03-26 20:58:38,293 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 20:58:38,295 - werkzeug - INFO -  * Restarting with stat
+2025-03-26 20:58:39,448 - __main__ - INFO - Starting Options-Technical Hybrid Scanner
+2025-03-26 20:58:39,461 - werkzeug - WARNING -  * Debugger is active!
+2025-03-26 20:58:39,464 - werkzeug - INFO -  * Debugger PIN: 463-917-157
+2025-03-26 20:58:45,401 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2025 20:58:45] "GET /api/scan?filters={"trend":["bullish","bearish","neutral"],"pcr_min":0,"pcr_max":2,"rsi_min":0,"rsi_max":100,"stoch_rsi_min":0,"stoch_rsi_max":100,"min_confidence":60} HTTP/1.1" 200 -

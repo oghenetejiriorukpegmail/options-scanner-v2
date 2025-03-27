@@ -1,0 +1,189 @@
+/* Progress Bar Styles */
+.progress {
+    height: 25px;
+    border-radius: 12px;
+    background-color: #2a2e35;
+    margin: 20px 0;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    background-color: #007bff;
+    background-image: linear-gradient(45deg,
+                    rgba(255, 255, 255, 0.15) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(255, 255, 255, 0.15) 50%,
+                    rgba(255, 255, 255, 0.15) 75%,
+                    transparent 75%,
+                    transparent);
+    background-size: 40px 40px;
+    border-radius: 12px;
+    transition: width 0.6s ease, background-color 0.3s ease;
+}
+
+.progress-bar:not(.bg-danger):not(.bg-success) {
+    animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progress-text {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.progress-bar.bg-success {
+    background-color: #28a745 !important;
+    background-image: none;
+}
+
+.progress-bar.bg-danger {
+    background-color: #dc3545 !important;
+    background-image: none;
+    animation: error-pulse 1.5s infinite;
+}
+
+@keyframes progress-bar-stripes {
+    from { background-position: 40px 0; }
+    to { background-position: 0 0; }
+}
+
+@keyframes error-pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+/* Options-Technical Hybrid Scanner Styles */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.setup-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.setup-item {
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.setup-item.bullish {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left: 4px solid #28a745;
+}
+
+.setup-item.bearish {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid #dc3545;
+}
+
+.setup-item.neutral {
+    background-color: rgba(108, 117, 125, 0.1);
+    border-left: 4px solid #6c757d;
+}
+
+.setup-item .symbol {
+    font-weight: 600;
+}
+
+.setup-item .confidence {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.table th {
+    background-color: #f1f1f1;
+}
+
+.signal-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.signal-badge.yes {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.signal-badge.no {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.signal-badge.weak {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+#analysisResults ul {
+    padding-left: 20px;
+}
+
+.trend-bullish {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.trend-bearish {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.trend-neutral {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+canvas {
+    width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    
+    .progress {
+        height: 20px;
+        margin: 15px 0;
+    }
+    
+    .progress-text {
+        font-size: 0.9rem;
+    }
+}
