@@ -182,4 +182,19 @@ def create_app():
         except Exception as e:
             return jsonify({'success': False, 'error': str(e)})
 
+    @app.route('/api/options_metrics/<symbol>')
+    def get_options_metrics(symbol):
+        try:
+            from src.modules.options_metrics import OptionsMetricsAnalyzer
+            analyzer = OptionsMetricsAnalyzer(symbol)
+            metrics = analyzer.calculate_metrics()
+            if metrics:
+                return jsonify({
+                    'success': True,
+                    'metrics': metrics
+                })
+            return jsonify({'success': False, 'error': f'Could not calculate metrics for {symbol}'})
+        except Exception as e:
+            return jsonify({'success': False, 'error': str(e)})
+
     return app

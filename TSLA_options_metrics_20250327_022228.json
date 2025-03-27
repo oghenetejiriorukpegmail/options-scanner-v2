@@ -1,0 +1,4570 @@
+{
+  "symbol": "TSLA",
+  "current_price": 272.05999755859375,
+  "expiration": "2025-03-28",
+  "timestamp": "2025-03-27T02:22:28.535670",
+  "gamma_profile": [
+    {
+      "strike": 100.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.6324340186084765
+    },
+    {
+      "strike": 110.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5956774204693241
+    },
+    {
+      "strike": 120.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5589208223301718
+    },
+    {
+      "strike": 130.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5221642241910195
+    },
+    {
+      "strike": 140.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.4854076260518671
+    },
+    {
+      "strike": 150.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.4486510279127148
+    },
+    {
+      "strike": 155.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.43027272884313855
+    },
+    {
+      "strike": 157.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.4210835793083505
+    },
+    {
+      "strike": 160.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.4118944297735624
+    },
+    {
+      "strike": 162.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.40270528023877433
+    },
+    {
+      "strike": 165.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.3935161307039862
+    },
+    {
+      "strike": 167.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.3843269811691981
+    },
+    {
+      "strike": 170.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.37513783163441006
+    },
+    {
+      "strike": 172.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.36594868209962195
+    },
+    {
+      "strike": 175.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.3567595325648339
+    },
+    {
+      "strike": 177.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.3475703830300458
+    },
+    {
+      "strike": 180.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.33838123349525767
+    },
+    {
+      "strike": 182.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.3291920839604696
+    },
+    {
+      "strike": 185.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.3200029344256815
+    },
+    {
+      "strike": 187.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.31081378489089345
+    },
+    {
+      "strike": 190.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.30162463535610534
+    },
+    {
+      "strike": 192.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.29243548582131723
+    },
+    {
+      "strike": 195.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.2832463362865292
+    },
+    {
+      "strike": 197.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.27405718675174107
+    },
+    {
+      "strike": 200.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.264868037216953
+    },
+    {
+      "strike": 202.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.2556788876821649
+    },
+    {
+      "strike": 205.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.24648973814737682
+    },
+    {
+      "strike": 207.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.23730058861258874
+    },
+    {
+      "strike": 210.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.22811143907780065
+    },
+    {
+      "strike": 212.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.21892228954301254
+    },
+    {
+      "strike": 215.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.20973314000822446
+    },
+    {
+      "strike": 217.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.20054399047343638
+    },
+    {
+      "strike": 220.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.1913548409386483
+    },
+    {
+      "strike": 222.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.1821656914038602
+    },
+    {
+      "strike": 225.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.17297654186907213
+    },
+    {
+      "strike": 227.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.16378739233428402
+    },
+    {
+      "strike": 230.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.15459824279949594
+    },
+    {
+      "strike": 232.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.14540909326470786
+    },
+    {
+      "strike": 235.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.13621994372991977
+    },
+    {
+      "strike": 237.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.1270307941951317
+    },
+    {
+      "strike": 240.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.1178416446603436
+    },
+    {
+      "strike": 242.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.1086524951255555
+    },
+    {
+      "strike": 245.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.09946334559076742
+    },
+    {
+      "strike": 247.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.09027419605597933
+    },
+    {
+      "strike": 250.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.08108504652119124
+    },
+    {
+      "strike": 252.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.07189589698640315
+    },
+    {
+      "strike": 255.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.06270674745161507
+    },
+    {
+      "strike": 257.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.05351759791682698
+    },
+    {
+      "strike": 260.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.04432844838203889
+    },
+    {
+      "strike": 262.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.035139298847250804
+    },
+    {
+      "strike": 265.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.025950149312462718
+    },
+    {
+      "strike": 267.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.016760999777674628
+    },
+    {
+      "strike": 270.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.007571850242886541
+    },
+    {
+      "strike": 272.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.001617299291901546
+    },
+    {
+      "strike": 275.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.010806448826689633
+    },
+    {
+      "strike": 277.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.019995598361477723
+    },
+    {
+      "strike": 280.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.02918474789626581
+    },
+    {
+      "strike": 282.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.0383738974310539
+    },
+    {
+      "strike": 285.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.04756304696584198
+    },
+    {
+      "strike": 287.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.05675219650063007
+    },
+    {
+      "strike": 290.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.06594134603541815
+    },
+    {
+      "strike": 292.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.07513049557020625
+    },
+    {
+      "strike": 295.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.08431964510499433
+    },
+    {
+      "strike": 297.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.09350879463978243
+    },
+    {
+      "strike": 300.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.10269794417457051
+    },
+    {
+      "strike": 302.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.11188709370935859
+    },
+    {
+      "strike": 305.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.12107624324414669
+    },
+    {
+      "strike": 307.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.13026539277893479
+    },
+    {
+      "strike": 310.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.13945454231372287
+    },
+    {
+      "strike": 312.5,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.14864369184851095
+    },
+    {
+      "strike": 315.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.15783284138329903
+    },
+    {
+      "strike": 320.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.1762111404528752
+    },
+    {
+      "strike": 325.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.1945894395224514
+    },
+    {
+      "strike": 330.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.21296773859202756
+    },
+    {
+      "strike": 335.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.23134603766160375
+    },
+    {
+      "strike": 340.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.2497243367311799
+    },
+    {
+      "strike": 345.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.2681026358007561
+    },
+    {
+      "strike": 350.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.28648093487033227
+    },
+    {
+      "strike": 355.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.30485923393990844
+    },
+    {
+      "strike": 360.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.3232375330094846
+    },
+    {
+      "strike": 365.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.34161583207906077
+    },
+    {
+      "strike": 370.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.359994131148637
+    },
+    {
+      "strike": 375.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.37837243021821315
+    },
+    {
+      "strike": 380.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.3967507292877893
+    },
+    {
+      "strike": 385.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.4151290283573655
+    },
+    {
+      "strike": 390.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.43350732742694165
+    },
+    {
+      "strike": 395.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.4518856264965178
+    },
+    {
+      "strike": 400.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.47026392556609403
+    },
+    {
+      "strike": 405.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.4886422246356702
+    },
+    {
+      "strike": 410.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5070205237052464
+    },
+    {
+      "strike": 415.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5253988227748225
+    },
+    {
+      "strike": 420.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5437771218443987
+    },
+    {
+      "strike": 425.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5621554209139749
+    },
+    {
+      "strike": 430.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5805337199835511
+    },
+    {
+      "strike": 435.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.5989120190531272
+    },
+    {
+      "strike": 440.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.6172903181227034
+    },
+    {
+      "strike": 445.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.6356686171922796
+    },
+    {
+      "strike": 450.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.6540469162618557
+    },
+    {
+      "strike": 455.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.672425215331432
+    },
+    {
+      "strike": 460.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.6908035144010081
+    },
+    {
+      "strike": 465.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.7091818134705843
+    },
+    {
+      "strike": 470.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.7275601125401605
+    },
+    {
+      "strike": 475.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.7459384116097366
+    },
+    {
+      "strike": 480.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.7643167106793128
+    },
+    {
+      "strike": 485.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.782695009748889
+    },
+    {
+      "strike": 490.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.8010733088184652
+    },
+    {
+      "strike": 495.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.8194516078880414
+    },
+    {
+      "strike": 500.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.8378299069576175
+    },
+    {
+      "strike": 505.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.8562082060271937
+    },
+    {
+      "strike": 510.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.8745865050967698
+    },
+    {
+      "strike": 515.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.892964804166346
+    },
+    {
+      "strike": 520.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.9113431032359223
+    },
+    {
+      "strike": 525.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.9297214023054984
+    },
+    {
+      "strike": 530.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.9480997013750746
+    },
+    {
+      "strike": 535.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.9664780004446507
+    },
+    {
+      "strike": 540.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 0.9848562995142269
+    },
+    {
+      "strike": 545.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.0032345985838031
+    },
+    {
+      "strike": 550.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.0216128976533794
+    },
+    {
+      "strike": 555.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.0399911967229554
+    },
+    {
+      "strike": 560.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.0583694957925316
+    },
+    {
+      "strike": 565.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.0767477948621078
+    },
+    {
+      "strike": 570.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.095126093931684
+    },
+    {
+      "strike": 575.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.1135043930012603
+    },
+    {
+      "strike": 580.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.1318826920708362
+    },
+    {
+      "strike": 585.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.1502609911404125
+    },
+    {
+      "strike": 590.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.1686392902099887
+    },
+    {
+      "strike": 600.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.205395888349141
+    },
+    {
+      "strike": 610.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.2421524864882934
+    },
+    {
+      "strike": 620.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.2789090846274458
+    },
+    {
+      "strike": 630.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.315665682766598
+    },
+    {
+      "strike": 640.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.3524222809057505
+    },
+    {
+      "strike": 650.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.3891788790449027
+    },
+    {
+      "strike": 660.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.4259354771840551
+    },
+    {
+      "strike": 670.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.4626920753232076
+    },
+    {
+      "strike": 680.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.4994486734623598
+    },
+    {
+      "strike": 690.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.5362052716015122
+    },
+    {
+      "strike": 700.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.5729618697406644
+    },
+    {
+      "strike": 710.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.6097184678798169
+    },
+    {
+      "strike": 720.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.6464750660189693
+    },
+    {
+      "strike": 730.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.6832316641581215
+    },
+    {
+      "strike": 740.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.719988262297274
+    },
+    {
+      "strike": 750.0,
+      "total_gamma": 0,
+      "call_gamma": 0,
+      "put_gamma": 0,
+      "distance_from_price": 1.7567448604364262
+    }
+  ],
+  "high_gamma_strikes": [
+    100.0,
+    110.0,
+    120.0,
+    130.0,
+    140.0,
+    150.0,
+    155.0,
+    157.5,
+    160.0,
+    162.5,
+    165.0,
+    167.5,
+    170.0,
+    172.5,
+    175.0,
+    177.5,
+    180.0,
+    182.5,
+    185.0,
+    187.5,
+    190.0,
+    192.5,
+    195.0,
+    197.5,
+    200.0,
+    202.5,
+    205.0,
+    207.5,
+    210.0,
+    212.5,
+    215.0,
+    217.5,
+    220.0,
+    222.5,
+    225.0,
+    227.5,
+    230.0,
+    232.5,
+    235.0,
+    237.5,
+    240.0,
+    242.5,
+    245.0,
+    247.5,
+    250.0,
+    252.5,
+    255.0,
+    257.5,
+    260.0,
+    262.5,
+    265.0,
+    267.5,
+    270.0,
+    272.5,
+    275.0,
+    277.5,
+    280.0,
+    282.5,
+    285.0,
+    287.5,
+    290.0,
+    292.5,
+    295.0,
+    297.5,
+    300.0,
+    302.5,
+    305.0,
+    307.5,
+    310.0,
+    312.5,
+    315.0,
+    320.0,
+    325.0,
+    330.0,
+    335.0,
+    340.0,
+    345.0,
+    350.0,
+    355.0,
+    360.0,
+    365.0,
+    370.0,
+    375.0,
+    380.0,
+    385.0,
+    390.0,
+    395.0,
+    400.0,
+    405.0,
+    410.0,
+    415.0,
+    420.0,
+    425.0,
+    430.0,
+    435.0,
+    440.0,
+    445.0,
+    450.0,
+    455.0,
+    460.0,
+    465.0,
+    470.0,
+    475.0,
+    480.0,
+    485.0,
+    490.0,
+    495.0,
+    500.0,
+    505.0,
+    510.0,
+    515.0,
+    520.0,
+    525.0,
+    530.0,
+    535.0,
+    540.0,
+    545.0,
+    550.0,
+    555.0,
+    560.0,
+    565.0,
+    570.0,
+    575.0,
+    580.0,
+    585.0,
+    590.0,
+    600.0,
+    610.0,
+    620.0,
+    630.0,
+    640.0,
+    650.0,
+    660.0,
+    670.0,
+    680.0,
+    690.0,
+    700.0,
+    710.0,
+    720.0,
+    730.0,
+    740.0,
+    750.0
+  ],
+  "gex": {
+    "total_gex": 0.0,
+    "gex_by_strike": [
+      {
+        "strike": 100.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 110.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 120.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 130.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 140.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 150.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 155.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 157.5,
+        "total_gex": 0.0,
+        "call_gex": 0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 160.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 162.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 165.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 167.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 170.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 172.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 175.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 177.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 180.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 182.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 185.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 187.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 190.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 192.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 195.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 197.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 200.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 202.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 205.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 207.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 210.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 212.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 215.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 217.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 220.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 222.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 225.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 227.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 230.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 232.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 235.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 237.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 240.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 242.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 245.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 247.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 250.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 252.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 255.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 257.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 260.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 262.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 265.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 267.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 270.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 272.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 275.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 277.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 280.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 282.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 285.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 287.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 290.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 292.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 295.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 297.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 300.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 302.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 305.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 307.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 310.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 312.5,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 315.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 320.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 325.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 330.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 335.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 340.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 345.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 350.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 355.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 360.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 365.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 370.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 375.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 380.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 385.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 390.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 395.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 400.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 405.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 410.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 415.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 420.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 425.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 430.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 435.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 440.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 445.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 450.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 455.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 460.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 465.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 470.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 475.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 480.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 485.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 490.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 495.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 500.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 505.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 510.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 515.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 520.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 525.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 530.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 535.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 540.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 545.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 550.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      },
+      {
+        "strike": 555.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 560.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 565.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 570.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 575.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 580.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 585.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 590.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 600.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 610.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 620.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 630.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 640.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 650.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 660.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 670.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 680.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 690.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 700.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 710.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 720.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 730.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 740.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0
+      },
+      {
+        "strike": 750.0,
+        "total_gex": 0.0,
+        "call_gex": 0.0,
+        "put_gex": 0.0
+      }
+    ],
+    "gex_direction": "negative"
+  },
+  "vwiv": {
+    "vwiv": 0.1543638507659167,
+    "total_volume": 1960387.0
+  },
+  "charm": [
+    {
+      "strike": 100.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 110.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 120.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 130.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 140.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 150.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 155.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 157.5,
+      "total_charm": 0.0,
+      "call_charm": 0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 160.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 162.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 165.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 167.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 170.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 172.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 175.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 177.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 180.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 182.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 185.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 187.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 190.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 192.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 195.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 197.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 200.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 202.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 205.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 207.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 210.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 212.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 215.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 217.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 220.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 222.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 225.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 227.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 230.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 232.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 235.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 237.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 240.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 242.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 245.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 247.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 250.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 252.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 255.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 257.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 260.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 262.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 265.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 267.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 270.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 272.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 275.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 277.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 280.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 282.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 285.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 287.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 290.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 292.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 295.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 297.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 300.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 302.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 305.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 307.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 310.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 312.5,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 315.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 320.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 325.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 330.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 335.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 340.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 345.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 350.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 355.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 360.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 365.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 370.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 375.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 380.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 385.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 390.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 395.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 400.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 405.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 410.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 415.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 420.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 425.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 430.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 435.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 440.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 445.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 450.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 455.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 460.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 465.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 470.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 475.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 480.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 485.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 490.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 495.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 500.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 505.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 510.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 515.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 520.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 525.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 530.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 535.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 540.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 545.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 550.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    },
+    {
+      "strike": 555.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 560.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 565.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 570.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 575.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 580.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 585.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 590.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 600.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 610.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 620.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 630.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 640.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 650.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 660.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 670.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 680.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 690.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 700.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 710.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 720.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 730.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 740.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0
+    },
+    {
+      "strike": 750.0,
+      "total_charm": 0.0,
+      "call_charm": 0.0,
+      "put_charm": 0.0
+    }
+  ],
+  "vanna": [
+    {
+      "strike": 100.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 110.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 120.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 130.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 140.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 150.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 155.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 157.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 160.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 162.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 165.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 167.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 170.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 172.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 175.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 177.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 180.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 182.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 185.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 187.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 190.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 192.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 195.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 197.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 200.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 202.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 205.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 207.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 210.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 212.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 215.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 217.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 220.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 222.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 225.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 227.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 230.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 232.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 235.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 237.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 240.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 242.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 245.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 247.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 250.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 252.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 255.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 257.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 260.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 262.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 265.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 267.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 270.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 272.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 275.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 277.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 280.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 282.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 285.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 287.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 290.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 292.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 295.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 297.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 300.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 302.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 305.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 307.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 310.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 312.5,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 315.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 320.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 325.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 330.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 335.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 340.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 345.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 350.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 355.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 360.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 365.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 370.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 375.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 380.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 385.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 390.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 395.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 400.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 405.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 410.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 415.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 420.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 425.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 430.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 435.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 440.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 445.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 450.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 455.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 460.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 465.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 470.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 475.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 480.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 485.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 490.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 495.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 500.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 505.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 510.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 515.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 520.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 525.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 530.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 535.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 540.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 545.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 550.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    },
+    {
+      "strike": 555.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 560.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 565.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 570.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 575.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 580.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 585.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 590.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 600.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 610.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 620.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 630.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 640.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 650.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 660.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 670.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 680.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 690.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 700.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 710.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 720.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 730.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 740.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0
+    },
+    {
+      "strike": 750.0,
+      "total_vanna": 0.0,
+      "call_vanna": 0.0,
+      "put_vanna": 0.0
+    }
+  ],
+  "vomma": [
+    {
+      "strike": 100.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 110.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 120.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 130.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 140.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 150.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 155.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 157.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 160.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 162.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 165.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 167.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 170.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 172.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 175.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 177.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 180.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 182.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 185.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 187.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 190.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 192.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 195.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 197.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 200.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 202.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 205.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 207.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 210.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 212.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 215.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 217.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 220.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 222.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 225.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 227.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 230.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 232.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 235.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 237.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 240.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 242.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 245.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 247.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 250.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 252.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 255.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 257.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 260.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 262.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 265.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 267.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 270.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 272.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 275.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 277.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 280.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 282.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 285.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 287.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 290.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 292.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 295.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 297.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 300.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 302.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 305.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 307.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 310.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 312.5,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 315.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 320.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 325.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 330.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 335.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 340.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 345.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 350.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 355.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 360.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 365.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 370.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 375.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 380.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 385.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 390.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 395.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 400.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 405.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 410.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 415.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 420.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 425.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 430.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 435.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 440.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 445.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 450.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 455.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 460.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 465.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 470.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 475.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 480.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 485.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 490.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 495.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 500.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 505.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 510.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 515.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 520.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 525.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 530.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 535.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 540.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 545.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 550.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    },
+    {
+      "strike": 555.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 560.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 565.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 570.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 575.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 580.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 585.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 590.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 600.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 610.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 620.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 630.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 640.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 650.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 660.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 670.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 680.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 690.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 700.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 710.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 720.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 730.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 740.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0
+    },
+    {
+      "strike": 750.0,
+      "total_vomma": 0.0,
+      "call_vomma": 0.0,
+      "put_vomma": 0.0
+    }
+  ]
+}

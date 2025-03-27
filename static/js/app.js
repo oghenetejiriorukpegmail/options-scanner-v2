@@ -7,6 +7,8 @@
 let emaChart = null;
 let levelsChart = null;
 let riskRewardChart = null;
+let gammaChart = null;
+let greeksChart = null;
 let scanResults = [];
 let scanInProgress = false;
 
@@ -441,6 +443,99 @@ function runScan() {
 }
 
 /**
+ * Fetch options metrics for a symbol
+ */
+function fetchOptionsMetrics(symbol) {
+    fetch(`/api/options_metrics/${symbol}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                createGammaChart(data.metrics);
+                createGreeksChart(data.metrics);
+            } else {
+                console.error(`Error fetching options metrics: ${data.error}`);
+            }
+        })
+        .catch(error => {
+            console.error(`Error fetching options metrics:`, error);
+        });
+}
+
+/**
+ * Create Gamma chart
+ */
+function createGammaChart(metrics) {
+    if (gammaChart) {
+        gammaChart.destroy();
+    }
+
+    const ctx = document.getElementById('gammaChart').getContext('2d');
+    gammaChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: metrics.strikes.map(s => `$${s.toFixed(2)}`),
+            datasets: [{
+                label: 'Gamma',
+                data: metrics.gamma,
+                borderColor: '#007bff',
+                backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: { beginAtZero: false }
+            }
+        }
+    });
+}
+
+/**
+ * Create Greeks chart
+ */
+function createGreeksChart(metrics) {
+    if (greeksChart) {
+        greeksChart.destroy();
+    }
+
+    const ctx = document.getElementById('greeksChart').getContext('2d');
+    greeksChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: metrics.strikes.map(s => `$${s.toFixed(2)}`),
+            datasets: [
+                {
+                    label: 'Charm',
+                    data: metrics.charm,
+                    borderColor: '#28a745',
+                    backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Vanna',
+                    data: metrics.vanna,
+                    borderColor: '#dc3545',
+                    backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Vomma',
+                    data: metrics.vomma,
+                    borderColor: '#6c757d',
+                    backgroundColor: 'rgba(108, 117, 125, 0.1)',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            scales: {
+                y: { beginAtZero: false }
+            }
+        }
+    });
+}
+
+/**
  * Analyze a specific symbol
  */
 function analyzeSymbol(symbol) {
@@ -559,6 +654,9 @@ function displayAnalysis(result) {
     createEmaChart(result);
     createLevelsChart(result);
     createRiskRewardChart(result);
+    
+    // Fetch and display options metrics
+    fetchOptionsMetrics(symbol);
     
     // Show results
     analysisResults.classList.remove('d-none');

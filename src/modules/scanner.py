@@ -97,19 +97,16 @@ class StockScanner:
     
     def _fetch_nasdaq_constituents(self):
         """Fetch current NASDAQ Composite constituents from FMP API"""
-        cache_file = 'nasdaq_constituents_cache.json'
-        cache_duration = 24 * 60 * 60  # 24 hours in seconds
+        from src.utils.data_cache import DataCache
+        cache = DataCache(max_fresh_fetches=3)
+        cache_key = 'nasdaq_constituents'
         
-        # Check cache first
-        if os.path.exists(cache_file):
-            try:
-                with open(cache_file, 'r') as f:
-                    cache = json.load(f)
-                    if time.time() - cache['timestamp'] < cache_duration:
-                        logger.info("Using cached NASDAQ constituents")
-                        return cache['symbols']
-            except Exception as e:
-                logger.warning(f"Error reading cache: {e}")
+        # Check if we should use cached data
+        if not cache.should_fetch(cache_key):
+            cached_data = cache.get_cache(cache_key)
+            if cached_data:
+                logger.info("Using cached NASDAQ constituents")
+                return cached_data['symbols']
         
         # Fetch from API
         try:
@@ -126,15 +123,13 @@ class StockScanner:
                 
             symbols = [item['symbol'] for item in data if 'symbol' in item]
             
-            # Update cache
-            try:
-                with open(cache_file, 'w') as f:
-                    json.dump({
-                        'timestamp': time.time(),
-                        'symbols': symbols
-                    }, f)
-            except Exception as e:
-                logger.warning(f"Could not update cache: {e}")
+            # Update cache using DataCache
+            from src.utils.data_cache import DataCache
+            cache = DataCache()
+            cache.set_cache('nasdaq_constituents', {
+                'timestamp': time.time(),
+                'symbols': symbols
+            })
                 
             return symbols
             
@@ -410,42 +405,61 @@ class StockScanner:
                     current_price = hist['Close'].iloc[-1]
                     logger.info(f"Fetched price for {symbol}: ${current_price:.2f}")
                     
-                    # Generate a result for every stock we can get price data for
-                    setup_type = random.choice(['bullish', 'bearish', 'neutral'])
-                    confidence = random.uniform(60, 95)
-                    logger.info(f"Generated {setup_type} setup for {symbol} with {confidence:.1f}% confidence at ${current_price:.2f}")
+                    # Initialize modules
+                    context_analyzer = MarketContextAnalyzer(symbol)
+                    levels_mapper = KeyLevelsMapper(symbol)
+                    setup_engine = TradeSetupEngine(symbol)
+                    risk_manager = RiskManager(account_size=100000)  # Default $100k account
                     
+                    # Get market context
+                    context = context_analyzer.analyze()
+                    if not context['success']:
+                        continue
+                        
+                    # Get key levels
+                    levels = levels_mapper.map_levels()
+                    if not levels['success']:
+                        continue
+                        
+                    # Determine trade setup
+                    setup = setup_engine.determine_setup(context, levels)
+                    
+                    # Calculate risk parameters
+                    stop_loss = risk_manager.calculate_stop_loss(
+                        setup['setup'],
+                        levels['current_price'],
+                        support_resistance=levels
+                    )
+                    
+                    position_size = risk_manager.calculate_position_size(
+                        levels['current_price'],
+                        stop_loss
+                    )
+                    
+                    # Calculate target price (1.5x risk-reward ratio)
+                    risk_amount = abs(levels['current_price'] - stop_loss)
+                    target_price = levels['current_price'] + (risk_amount * 1.5 * (1 if setup['setup'] == 'bullish' else -1))
+                    
+                    # Format results
                     result = {
                         'symbol': symbol,
                         'timestamp': datetime.now().isoformat(),
-                        'setup': f"{setup_type}_setup",
-                        'confidence': confidence,
-                        'reasons': [f"Reason {i+1}", f"Reason {i+2}"],
-                        'entry_signal': random.random() > 0.3,
-                        'entry_strength': random.uniform(50, 90),
-                        'entry_reasons': [f"Entry reason {i+1}"],
-                        'exit_signal': random.random() > 0.7,
-                        'exit_strength': random.uniform(40, 80),
-                        'exit_reasons': [f"Exit reason {i+1}"],
-                        'position_size': random.uniform(0.01, 0.05),
-                        'stop_loss': current_price * random.uniform(0.90, 0.95),
-                        'risk_reward': random.uniform(1.5, 3.0),
-                        'target_price': current_price * random.uniform(1.05, 1.20),
-                        'current_price': current_price,
-                        'market_context': {
-                            'trend': setup_type,
-                            'sentiment': random.choice(['positive', 'negative', 'neutral']),
-                            'momentum': random.choice(['strong', 'weak', 'neutral']),
-                            'pcr': random.uniform(0.5, 1.5),
-                            'rsi': random.uniform(30, 70),
-                            'stoch_rsi': random.uniform(20, 80)
-                        },
-                        'key_levels': {
-                            'support': [current_price * 0.90, current_price * 0.85, current_price * 0.80],
-                            'resistance': [current_price * 1.10, current_price * 1.20, current_price * 1.30],
-                            'max_pain': current_price,
-                            'high_gamma': [current_price * random.uniform(0.95, 1.05) for _ in range(random.randint(0, 3))]
-                        }
+                        'setup': setup['setup'],
+                        'confidence': setup['confidence'],
+                        'reasons': setup['reasons'],
+                        'entry_signal': True,  # All filtered setups are valid entries
+                        'entry_strength': setup['confidence'],
+                        'entry_reasons': setup['reasons'],
+                        'exit_signal': False,  # Exit signals handled separately
+                        'exit_strength': 0,
+                        'exit_reasons': [],
+                        'position_size': position_size,
+                        'stop_loss': stop_loss,
+                        'risk_reward': 1.5,
+                        'target_price': target_price,
+                        'current_price': levels['current_price'],
+                        'market_context': context,
+                        'key_levels': levels
                     }
                     
                     # Apply filters before adding to results

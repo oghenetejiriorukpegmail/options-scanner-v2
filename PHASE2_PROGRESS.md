@@ -20,10 +20,14 @@ This document tracks the progress of Phase 2 implementation for the Options-Tech
 ### Completed:
 - Integrated options metrics with Key Levels module (GEX, VWIV, high gamma strikes)
   
+### Completed:
+- Added visualization of options metrics in the web interface
+- Implemented second-order Greeks calculations (charm, vanna, vomma)
+- Added comprehensive unit tests for the options metrics module
+
 ### Next Steps:
-- Add visualization of options metrics in the web interface
-- Implement additional second-order Greeks calculations (charm, vanna, vomma)
-- Add unit tests for the options metrics module
+- Update web interface to visualize second-order Greeks
+- Address cache serialization issues
 
 ## 2. Social Media Sentiment Analysis ⏳
 

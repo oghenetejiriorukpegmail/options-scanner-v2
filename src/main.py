@@ -56,8 +56,13 @@ def main():
         # Run the scanner
         scanner = StockScanner()
         results = scanner.scan()
+        print("\n=== Scan Results ===")
+        print(f"{'Symbol':<6} {'Setup':<15} {'Confidence':>10} {'Price':>10} {'Stop Loss':>10} {'Target':>10}")
+        print("-" * 70)
         for result in results:
-            print(f"Symbol: {result['symbol']}, Setup: {result['setup']}, Confidence: {result['confidence']}%")
+            print(f"{result['symbol']:<6} {result['setup']:<15} {result['confidence']:>9.1f}% "
+                  f"${result['current_price']:>7.2f} ${result['stop_loss']:>7.2f} "
+                  f"${result['target_price']:>7.2f}")
     elif args.symbol:
         # Analyze a specific symbol
         symbol = args.symbol.upper()
@@ -96,11 +101,29 @@ def main():
         print(f"Entry Signal: {confirmation_results['entry']}")
         print(f"Exit Signal: {confirmation_results['exit']}")
         
-        # Get risk management recommendations
-        risk_results = risk_manager.get_recommendations(setup_results)
+        # Calculate risk parameters
+        risk_manager = RiskManager(account_size=100000)  # Default $100k account
+        stop_loss = risk_manager.calculate_stop_loss(
+            setup_results['setup'],
+            levels_results['current_price'],
+            support_resistance=levels_results
+        )
+        
+        position_size = risk_manager.calculate_position_size(
+            levels_results['current_price'],
+            stop_loss
+        )
+        
+        # Calculate target price (1.5x risk-reward ratio)
+        risk_amount = abs(levels_results['current_price'] - stop_loss)
+        target_price = levels_results['current_price'] + (risk_amount * 1.5 * (1 if setup_results['setup'] == 'bullish' else -1))
+        
         print(f"\n=== Risk Management for {symbol} ===")
-        print(f"Position Size: {risk_results['position_size']}")
-        print(f"Stop Loss: {risk_results['stop_loss']}")
+        print(f"Position Size: {position_size['shares']} shares (${position_size['position_value']:.2f})")
+        print(f"Stop Loss: ${stop_loss:.2f}")
+        print(f"Target Price: ${target_price:.2f}")
+        print(f"Risk/Reward: 1:1.5")
+        print(f"Risk per Trade: ${position_size['total_risk']:.2f} ({position_size['risk_percent']:.1f}% of account)")
     else:
         parser.print_help()
 

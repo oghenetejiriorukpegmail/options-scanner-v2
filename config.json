@@ -8,7 +8,39 @@
     "rsi_max": 100,
     "stoch_rsi_min": 0,
     "stoch_rsi_max": 100,
-    "min_confidence": 20
+    "min_confidence": 20,
+    "gamma_min": 0.1,
+    "gex_direction": ["positive", "negative"],
+    "vwiv_percentile_min": 0,
+    "vwiv_percentile_max": 100,
+    "high_gamma_count_min": 0
+  },
+  "options_metrics": {
+    "enabled": true,
+    "risk_free_rate": 0.05,
+    "high_gamma_threshold_percentile": 90,
+    "cache_expiry_hours": 24
+  },
+  "sentiment_analysis": {
+    "enabled": false,
+    "sources": ["twitter", "reddit", "stocktwits"],
+    "lookback_days": 7,
+    "min_sentiment_score": 0.5,
+    "twitter_api_key": "",
+    "reddit_api_key": "",
+    "stocktwits_api_key": ""
+  },
+  "alerts": {
+    "enabled": false,
+    "check_interval_seconds": 300,
+    "notification_methods": ["browser"],
+    "email_settings": {
+      "smtp_server": "",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "recipients": []
+    }
   },
   "output_dir": "scanner_results",
   "fmp_api_key": "O2REndZGRE2gZZCf2gU9xBjdjboP18yY"
