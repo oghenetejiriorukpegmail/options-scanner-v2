@@ -86,7 +86,28 @@ class DataCache:
         self.fetch_count += 1
         cache_file = os.path.join(self.cache_dir, f"{cache_key}.json")
         try:
+            # Convert data to JSON-serializable format
+            serializable_data = self._make_json_serializable(data)
             with open(cache_file, 'w') as f:
-                json.dump(data, f)
+                json.dump(serializable_data, f)
         except Exception as e:
+            logger.error(f"Error writing cache {cache_key}: {e}")
+            
+    def _make_json_serializable(self, obj):
+            """Convert objects to JSON-serializable format"""
+            if isinstance(obj, dict):
+                return {k: self._make_json_serializable(v) for k, v in obj.items()}
+            elif isinstance(obj, list):
+                return [self._make_json_serializable(item) for item in obj]
+            elif hasattr(obj, 'isoformat'):  # Handle datetime objects
+                return obj.isoformat()
+            elif hasattr(obj, 'to_dict'):  # Handle pandas objects
+                return self._make_json_serializable(obj.to_dict())
+            elif hasattr(obj, 'tolist'):  # Handle numpy arrays
+                return obj.tolist()
+            elif str(type(obj)) == "<class 'pandas._libs.tslibs.timestamps.Timestamp'>":
+                # Handle pandas Timestamp objects
+                return str(obj)
+            else:
+                return obj
             logger.error(f"Error writing cache {cache_key}: {e}")

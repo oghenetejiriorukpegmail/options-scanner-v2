@@ -136,13 +136,9 @@ class StockScanner:
         except Exception as e:
             logger.error(f"Error fetching NASDAQ constituents: {e}")
             # Try to return from cache even if expired
-            if os.path.exists(cache_file):
-                try:
-                    with open(cache_file, 'r') as f:
-                        cache = json.load(f)
-                        return cache['symbols']
-                except:
-                    pass
+            cached_data = self.cache.get_cache(cache_key)
+            if cached_data:
+                return cached_data['symbols']
             raise
 
     def _load_symbols(self):
@@ -178,54 +174,103 @@ class StockScanner:
         
         try:
             try:
-                # Get real price data
-                ticker = yf.Ticker(symbol)
-                current_price = ticker.history(period='1d')['Close'].iloc[-1]
+                # Initialize analysis modules
+                market_analyzer = MarketContextAnalyzer(symbol)
+                if not market_analyzer._fetch_data():
+                    logger.error(f"Failed to fetch data for {symbol}")
+                    return None
                 
-                # Generate analysis data
-                setup_type = random.choice(['bullish', 'bearish', 'neutral'])
-                confidence = random.uniform(60, 95)
+                # Validate we have sufficient price data
+                if len(market_analyzer.data) < 20:  # Need at least 20 days for indicators
+                    logger.error(f"Insufficient data for {symbol} - only {len(market_analyzer.data)} days available")
+                    return None
                 
-                # Generate high gamma strikes around actual price
-                high_gamma = []
-                for _ in range(random.randint(1, 4)):
-                    high_gamma.append(random.uniform(current_price * 0.95, current_price * 1.05))
+                current_price = market_analyzer.data['Close'].iloc[-1]
+                
+                # Calculate actual indicators and get market context
+                market_analyzer._calculate_indicators()
+                market_context = market_analyzer.analyze()
+                if not market_context.get('success', False):
+                    logger.error(f"Failed to analyze market context for {symbol}")
+                    return None
+
+                # Initialize analysis modules
+                key_levels = KeyLevelsMapper(symbol)
+                trade_setup = TradeSetupEngine(symbol)
+                risk_manager = RiskManager(100000)  # Default $100k account
+                
+                # Map key levels
+                levels = key_levels.map_levels()
+                
+                # Determine trade setup
+                setup = trade_setup.determine_setup(market_context, levels)
+                
+                # Ensure we're working with scalar values for price
+                current_price = float(levels['current_price']) if isinstance(levels['current_price'], (int, float)) else levels['current_price'][0]
+                
+                # Calculate stop loss
+                try:
+                    stop_loss = risk_manager.calculate_stop_loss(
+                        setup['setup'],
+                        current_price,
+                        support_resistance=levels
+                    )
+                except Exception as e:
+                    # Fallback to a simple percentage-based stop loss if there's an error
+                    logger.warning(f"Error calculating stop loss for {symbol}: {e}")
+                    if setup['setup'] == 'bullish':
+                        stop_loss = current_price * 0.95  # 5% below current price
+                    else:
+                        stop_loss = current_price * 1.05  # 5% above current price
+                
+                # Ensure stop_loss is a scalar value
+                stop_loss_value = float(stop_loss) if isinstance(stop_loss, (int, float)) else stop_loss[0]
+                
+                # Calculate position size
+                position_size = risk_manager.calculate_position_size(
+                    current_price,
+                    stop_loss_value
+                )
+                
+                # Calculate risk parameters
+                risk_amount = abs(current_price - stop_loss_value)
+                direction = 1 if setup['setup'] == 'bullish' else -1
+                target_price = current_price + (risk_amount * 1.5 * direction)
+                
+                logger.info(f"Current price: {current_price}, Stop loss: {stop_loss_value}")
+                logger.info(f"Risk amount: {risk_amount}, Direction: {direction}, Target price: {target_price}")
+                
+                risk_params = {
+                    'position_size': position_size,
+                    'stop_loss': stop_loss_value,
+                    'risk_reward': 1.5,  # Default risk-reward ratio
+                    'target_price': target_price
+                }
+                
             except Exception as e:
-                logger.error(f"Error getting price data for {symbol}: {e}")
+                logger.error(f"Error analyzing {symbol}: {e}")
                 return None
-            
-            # Create a mock result
+                
+            # Build result dictionary
             result = {
                 'symbol': symbol,
                 'timestamp': datetime.now().isoformat(),
-                'setup': f"{setup_type}_setup",
-                'confidence': confidence,
-                'reasons': [f"Technical indicator alignment", f"Volume pattern confirmation", f"Price action at key level"],
-                'entry_signal': random.random() > 0.3,
-                'entry_strength': random.uniform(50, 90),
-                'entry_reasons': [f"RSI divergence", f"MACD crossover"],
-                'exit_signal': random.random() > 0.7,
-                'exit_strength': random.uniform(40, 80),
-                'exit_reasons': [f"Profit target reached", f"Technical reversal"],
-                'position_size': random.uniform(0.01, 0.05),
-                'stop_loss': current_price * random.uniform(0.90, 0.95),
-                'risk_reward': random.uniform(1.5, 3.0),
-                'target_price': current_price * random.uniform(1.05, 1.20),
+                'setup': setup['setup'],
+                'confidence': setup['confidence'],
+                'reasons': setup['reasons'],
+                'entry_signal': True,  # Default to true for valid setups
+                'entry_strength': setup['confidence'],
+                'entry_reasons': setup['reasons'],
+                'exit_signal': False,  # Default to false
+                'exit_strength': 0,
+                'exit_reasons': [],
+                'position_size': risk_params['position_size']['risk_percent'] / 100,  # Convert to percentage of account
+                'stop_loss': risk_params['stop_loss'],
+                'risk_reward': risk_params['risk_reward'],
+                'target_price': risk_params['target_price'],
                 'current_price': current_price,
-                'market_context': {
-                    'trend': setup_type,
-                    'sentiment': random.choice(['positive', 'negative', 'neutral']),
-                    'momentum': random.choice(['strong', 'weak', 'neutral']),
-                    'pcr': random.uniform(0.5, 1.5),
-                    'rsi': random.uniform(30, 70),
-                    'stoch_rsi': random.uniform(20, 80)
-                },
-                'key_levels': {
-                    'support': [current_price * 0.9, current_price * 0.85, current_price * 0.8],
-                    'resistance': [current_price * 1.1, current_price * 1.2, current_price * 1.3],
-                    'max_pain': current_price,
-                    'high_gamma': high_gamma
-                }
+                'market_context': market_context,
+                'key_levels': levels
             }
             
             return result
@@ -345,42 +390,61 @@ class StockScanner:
                         current_price = hist['Close'].iloc[-1]
                         logger.info(f"Fetched price for {symbol}: ${current_price:.2f}")
                         
-                        # Generate a result for every stock we can get price data for
-                        setup_type = random.choice(['bullish', 'bearish', 'neutral'])
-                        confidence = random.uniform(60, 95)
-                        logger.info(f"Generated {setup_type} setup for {symbol} with {confidence:.1f}% confidence at ${current_price:.2f}")
+                        # Initialize modules
+                        context_analyzer = MarketContextAnalyzer(symbol)
+                        levels_mapper = KeyLevelsMapper(symbol)
+                        setup_engine = TradeSetupEngine(symbol)
+                        risk_manager = RiskManager(account_size=100000)  # Default $100k account
                         
+                        # Get market context
+                        context = context_analyzer.analyze()
+                        if not context.get('success', False):
+                            continue
+                            
+                        # Get key levels
+                        levels = levels_mapper.map_levels()
+                        if not levels.get('success', False):
+                            continue
+                            
+                        # Determine trade setup
+                        setup = setup_engine.determine_setup(context, levels)
+                        
+                        # Calculate risk parameters
+                        stop_loss = risk_manager.calculate_stop_loss(
+                            setup['setup'],
+                            levels['current_price'],
+                            support_resistance=levels
+                        )
+                        
+                        position_size = risk_manager.calculate_position_size(
+                            levels['current_price'],
+                            stop_loss
+                        )
+                        
+                        # Calculate target price (1.5x risk-reward ratio)
+                        risk_amount = abs(levels['current_price'] - stop_loss)
+                        target_price = levels['current_price'] + (risk_amount * 1.5 * (1 if setup['setup'] == 'bullish' else -1))
+                        
+                        # Format results
                         result = {
                             'symbol': symbol,
                             'timestamp': datetime.now().isoformat(),
-                            'setup': f"{setup_type}_setup",
-                            'confidence': confidence,
-                            'reasons': [f"Reason {i+1}", f"Reason {i+2}"],
-                            'entry_signal': random.random() > 0.3,
-                            'entry_strength': random.uniform(50, 90),
-                            'entry_reasons': [f"Entry reason {i+1}"],
-                            'exit_signal': random.random() > 0.7,
-                            'exit_strength': random.uniform(40, 80),
-                            'exit_reasons': [f"Exit reason {i+1}"],
-                            'position_size': random.uniform(0.01, 0.05),
-                            'stop_loss': current_price * random.uniform(0.90, 0.95),
-                            'risk_reward': random.uniform(1.5, 3.0),
-                            'target_price': current_price * random.uniform(1.05, 1.20),
-                            'current_price': current_price,
-                            'market_context': {
-                                'trend': setup_type,
-                                'sentiment': random.choice(['positive', 'negative', 'neutral']),
-                                'momentum': random.choice(['strong', 'weak', 'neutral']),
-                                'pcr': random.uniform(0.5, 1.5),
-                                'rsi': random.uniform(30, 70),
-                                'stoch_rsi': random.uniform(20, 80)
-                            },
-                            'key_levels': {
-                                'support': [current_price * 0.90, current_price * 0.85, current_price * 0.80],
-                                'resistance': [current_price * 1.10, current_price * 1.20, current_price * 1.30],
-                                'max_pain': current_price,
-                                'high_gamma': [current_price * random.uniform(0.95, 1.05) for _ in range(random.randint(0, 3))]
-                            }
+                            'setup': setup['setup'],
+                            'confidence': setup['confidence'],
+                            'reasons': setup['reasons'],
+                            'entry_signal': True,  # All filtered setups are valid entries
+                            'entry_strength': setup['confidence'],
+                            'entry_reasons': setup['reasons'],
+                            'exit_signal': False,  # Exit signals handled separately
+                            'exit_strength': 0,
+                            'exit_reasons': [],
+                            'position_size': position_size,
+                            'stop_loss': stop_loss,
+                            'risk_reward': 1.5,
+                            'target_price': target_price,
+                            'current_price': levels['current_price'],
+                            'market_context': context,
+                            'key_levels': levels
                         }
                         
                         # Apply filters before adding to results
@@ -388,89 +452,10 @@ class StockScanner:
                             self.results.append(result)
                             logger.info(f"Added {symbol} to results")
                         else:
-                            logger.info(f"Filtered out {symbol} setup: confidence={confidence:.1f}%, trend={setup_type}")
-                            
+                            logger.info(f"Filtered out {symbol} setup: confidence={setup['confidence']:.1f}%, trend={setup['setup']}")
                     except Exception as e:
-                        logger.error(f"Error getting price data for {symbol}: {e}")
+                        logger.error(f"Error analyzing {symbol}: {e}")
                         continue
-                
-                # Get real price data
-                try:
-                    ticker = yf.Ticker(symbol)
-                    hist = ticker.history(period='1d')
-                    if hist.empty:
-                        logger.error(f"No price data available for {symbol}")
-                        continue
-                    
-                    current_price = hist['Close'].iloc[-1]
-                    logger.info(f"Fetched price for {symbol}: ${current_price:.2f}")
-                    
-                    # Initialize modules
-                    context_analyzer = MarketContextAnalyzer(symbol)
-                    levels_mapper = KeyLevelsMapper(symbol)
-                    setup_engine = TradeSetupEngine(symbol)
-                    risk_manager = RiskManager(account_size=100000)  # Default $100k account
-                    
-                    # Get market context
-                    context = context_analyzer.analyze()
-                    if not context['success']:
-                        continue
-                        
-                    # Get key levels
-                    levels = levels_mapper.map_levels()
-                    if not levels['success']:
-                        continue
-                        
-                    # Determine trade setup
-                    setup = setup_engine.determine_setup(context, levels)
-                    
-                    # Calculate risk parameters
-                    stop_loss = risk_manager.calculate_stop_loss(
-                        setup['setup'],
-                        levels['current_price'],
-                        support_resistance=levels
-                    )
-                    
-                    position_size = risk_manager.calculate_position_size(
-                        levels['current_price'],
-                        stop_loss
-                    )
-                    
-                    # Calculate target price (1.5x risk-reward ratio)
-                    risk_amount = abs(levels['current_price'] - stop_loss)
-                    target_price = levels['current_price'] + (risk_amount * 1.5 * (1 if setup['setup'] == 'bullish' else -1))
-                    
-                    # Format results
-                    result = {
-                        'symbol': symbol,
-                        'timestamp': datetime.now().isoformat(),
-                        'setup': setup['setup'],
-                        'confidence': setup['confidence'],
-                        'reasons': setup['reasons'],
-                        'entry_signal': True,  # All filtered setups are valid entries
-                        'entry_strength': setup['confidence'],
-                        'entry_reasons': setup['reasons'],
-                        'exit_signal': False,  # Exit signals handled separately
-                        'exit_strength': 0,
-                        'exit_reasons': [],
-                        'position_size': position_size,
-                        'stop_loss': stop_loss,
-                        'risk_reward': 1.5,
-                        'target_price': target_price,
-                        'current_price': levels['current_price'],
-                        'market_context': context,
-                        'key_levels': levels
-                    }
-                    
-                    # Apply filters before adding to results
-                    if self._apply_filters(result):
-                        self.results.append(result)
-                        logger.info(f"Added {symbol} to results")
-                    else:
-                        logger.info(f"Filtered out {symbol} setup: confidence={confidence:.1f}%, trend={setup_type}")
-                except Exception as e:
-                    logger.error(f"Error getting price data for {symbol}: {e}")
-                    continue
             
             # Log pre-filter results count
             logger.info(f"Pre-filter results count: {len(self.results)}")

@@ -120,6 +120,7 @@ class OptionsMetricsAnalyzer:
             }
             
             # Cache the result
+            # Just use the set_cache method which now handles JSON serialization internally
             self.cache.set_cache(cache_key, result)
             
             return result

@@ -189,9 +189,44 @@ def create_app():
             analyzer = OptionsMetricsAnalyzer(symbol)
             metrics = analyzer.calculate_metrics()
             if metrics:
+                # Prepare data for charts
+                strikes = []
+                gamma = []
+                charm = []
+                vanna = []
+                vomma = []
+                
+                # Extract data from gamma profile
+                if 'gamma_profile' in metrics:
+                    for point in metrics['gamma_profile']:
+                        strikes.append(point['strike'])
+                        gamma.append(point['total_gamma'])
+                
+                # Extract data from second-order Greeks
+                if 'charm' in metrics and metrics['charm']:
+                    charm = [point.get('total_charm', 0) for point in metrics['charm']]
+                
+                if 'vanna' in metrics and metrics['vanna']:
+                    vanna = [point.get('total_vanna', 0) for point in metrics['vanna']]
+                
+                if 'vomma' in metrics and metrics['vomma']:
+                    vomma = [point.get('total_vomma', 0) for point in metrics['vomma']]
+                
+                # Format data for frontend
+                chart_data = {
+                    'strikes': strikes,
+                    'gamma': gamma,
+                    'charm': charm,
+                    'vanna': vanna,
+                    'vomma': vomma,
+                    'high_gamma_strikes': metrics.get('high_gamma_strikes', []),
+                    'gex': metrics.get('gex', {}).get('total_gex', 0),
+                    'vwiv': metrics.get('vwiv', {}).get('vwiv', 0)
+                }
+                
                 return jsonify({
                     'success': True,
-                    'metrics': metrics
+                    'metrics': chart_data
                 })
             return jsonify({'success': False, 'error': f'Could not calculate metrics for {symbol}'})
         except Exception as e:

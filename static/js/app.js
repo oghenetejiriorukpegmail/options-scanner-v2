@@ -656,7 +656,7 @@ function displayAnalysis(result) {
     createRiskRewardChart(result);
     
     // Fetch and display options metrics
-    fetchOptionsMetrics(symbol);
+    fetchOptionsMetrics(result.symbol);
     
     // Show results
     analysisResults.classList.remove('d-none');
@@ -718,11 +718,9 @@ function createEmaChart(result) {
         },
         options: {
             scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: false
-                    }
-                }]
+                y: {
+                    beginAtZero: false
+                }
             }
         }
     });
@@ -778,11 +776,9 @@ function createLevelsChart(result) {
         },
         options: {
             scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: false
-                    }
-                }]
+                y: {
+                    beginAtZero: false
+                }
             }
         },
     });
@@ -818,11 +814,9 @@ function createRiskRewardChart(result) {
         },
         options: {
             scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: false
-                    }
-                }]
+                y: {
+                    beginAtZero: false
+                }
             }
         }
     });
