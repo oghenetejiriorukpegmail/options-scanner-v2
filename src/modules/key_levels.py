@@ -1,13 +1,19 @@
 """
 Key Levels Mapping Module
 
-This module uses options chain data to pinpoint critical support and resistance levels.
+This module uses options chain data to pinpoint critical support and resistance levels,
+enhanced with advanced options metrics including:
+- Gamma Exposure (GEX)
+- Volume-Weighted Implied Volatility (VWIV)
+- High gamma strikes
+- Max pain calculation
 """
 
 import logging
 import numpy as np
 import pandas as pd
 import yfinance as yf
+from src.modules.options_metrics import OptionsMetricsAnalyzer
 
 logger = logging.getLogger(__name__)
 
@@ -160,10 +166,15 @@ class KeyLevelsMapper:
     
     def map_levels(self):
         """
-        Map key price levels
+        Map key price levels with advanced options metrics
         
         Returns:
-            dict: Mapping results
+            dict: Mapping results including:
+                - Support/resistance levels
+                - Max pain point
+                - High gamma strikes
+                - Gamma Exposure (GEX) data
+                - Volume-Weighted Implied Volatility (VWIV)
         """
         if not self._fetch_data():
             return {
@@ -171,6 +182,8 @@ class KeyLevelsMapper:
                 'resistance': [],
                 'max_pain': None,
                 'high_gamma': [],
+                'gex': None,
+                'vwiv': None,
                 'success': False
             }
             
@@ -178,11 +191,34 @@ class KeyLevelsMapper:
         self._identify_support_resistance()
         high_gamma_strikes = self._calculate_greeks()
         
+        # Initialize OptionsMetricsAnalyzer and calculate advanced metrics
+        metrics_analyzer = OptionsMetricsAnalyzer(self.symbol)
+        metrics = metrics_analyzer.calculate_metrics()
+        
+        # Enhance support/resistance with GEX data
+        if metrics and metrics.get('gex'):
+            gex_data = metrics['gex']
+            gex_strikes = [item['strike'] for item in gex_data['gex_by_strike']
+                          if abs(item['total_gex']) > 0.1 * abs(gex_data['total_gex'])]
+            
+            # Add significant GEX strikes to support/resistance
+            for strike in gex_strikes:
+                if strike > self.current_price and strike not in self.resistance_levels:
+                    self.resistance_levels.append(strike)
+                elif strike < self.current_price and strike not in self.support_levels:
+                    self.support_levels.append(strike)
+            
+            # Sort the levels
+            self.resistance_levels.sort()
+            self.support_levels.sort(reverse=True)
+        
         return {
             'support': self.support_levels,
             'resistance': self.resistance_levels,
             'max_pain': self.max_pain,
             'high_gamma': high_gamma_strikes,
+            'gex': metrics.get('gex') if metrics else None,
+            'vwiv': metrics.get('vwiv') if metrics else None,
             'current_price': self.current_price,
             'success': True
         }
