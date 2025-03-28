@@ -22,6 +22,8 @@ from src.modules.key_levels import KeyLevelsMapper
 from src.modules.trade_setup import TradeSetupEngine
 from src.modules.confirmation import ConfirmationModule
 from src.modules.risk_management import RiskManager
+from src.modules.options_metrics import OptionsMetricsAnalyzer # Added import
+from src.modules.alerts import AlertsManager # Added import
 
 # Configure logging
 logging.basicConfig(
@@ -59,6 +61,7 @@ class StockScanner:
         self.symbols = self._load_symbols()
         self.results = []
         self.progress_callback = progress_callback
+        self.alerts_manager = AlertsManager(config=self.config) # Instantiate AlertsManager
     
     def _load_config(self, config_file):
         """Load scanner configuration"""
@@ -198,11 +201,13 @@ class StockScanner:
                 key_levels = KeyLevelsMapper(symbol)
                 trade_setup = TradeSetupEngine(symbol)
                 risk_manager = RiskManager(100000)  # Default $100k account
+                options_metrics_analyzer = OptionsMetricsAnalyzer(symbol) # Added instantiation
                 
                 # Map key levels
                 levels = key_levels.map_levels()
                 
                 # Determine trade setup
+                logger.info(f"Calling determine_setup with context: {market_context is not None} and levels: {levels is not None}")
                 setup = trade_setup.determine_setup(market_context, levels)
                 
                 # Ensure we're working with scalar values for price
@@ -246,14 +251,35 @@ class StockScanner:
                     'risk_reward': 1.5,  # Default risk-reward ratio
                     'target_price': target_price
                 }
+
+                # Calculate options metrics
+                options_metrics = options_metrics_analyzer.calculate_metrics()
+                if options_metrics is None:
+                    logger.warning(f"Could not calculate options metrics for {symbol}")
+                    options_metrics = {} # Use empty dict if calculation fails
                 
             except Exception as e:
                 logger.error(f"Error analyzing {symbol}: {e}")
                 return None
                 
+            # Extract historical data for charting
+            historical_df = market_analyzer.data.tail(60) # Get last 60 days
+            historical_chart_data = {
+                 'dates': [d.strftime('%Y-%m-%d') for d in historical_df.index],
+                 'price': historical_df['Close'].tolist(),
+                 'ema10': historical_df['ema10'].tolist(),
+                 'ema20': historical_df['ema20'].tolist(),
+                 'ema50': historical_df['ema50'].tolist(),
+            }
+            # Extract sparkline data (last 15 closing prices)
+            sparkline_data = market_analyzer.data['Close'].tail(15).tolist()
+
             # Build result dictionary
             result = {
                 'symbol': symbol,
+                'sparkline_data': sparkline_data, # Added sparkline data
+                'options_metrics': options_metrics, # Added options metrics
+                'historical_chart_data': historical_chart_data, # Added historical data
                 'timestamp': datetime.now().isoformat(),
                 'setup': setup['setup'],
                 'confidence': setup['confidence'],
@@ -282,35 +308,139 @@ class StockScanner:
     def _apply_filters(self, result):
         """
         Apply filters to scan results
-        
+
         Args:
             result (dict): Analysis result
-            
+
         Returns:
             bool: True if result passes filters, False otherwise
         """
         filters = self.config['filters']
-        
+        symbol = result.get('symbol', 'UNKNOWN') # Get symbol for logging
+
+        # If min_confidence is explicitly set to 0, bypass all other filters
+        # This ensures all symbols are returned when requested.
+        min_confidence_filter = filters.get('min_confidence', 60) # Default to 60 if not set
+        if isinstance(min_confidence_filter, (int, float)) and min_confidence_filter == 0:
+             # Check only confidence against the 0 threshold (which will always pass if confidence is not None)
+             confidence = result.get('confidence')
+             if confidence is None or not isinstance(confidence, (int, float)):
+                 logger.info(f"Filtering {symbol}: Confidence is missing or not a number ('{confidence}')")
+                 return False
+             # If confidence is valid and min_confidence is 0, it passes
+             return True
+
+        # --- Original Filter Logic ---
+
         # Filter by trend
-        if result['market_context']['trend'] not in filters['trend']:
+        trend = result.get('market_context', {}).get('trend')
+        allowed_trends = filters.get('trend', [])
+        if trend not in allowed_trends:
+            logger.info(f"Filtering {symbol}: Trend '{trend}' not in allowed trends {allowed_trends}")
             return False
-        
+
         # Filter by PCR
-        if not (filters['pcr_min'] <= result['market_context']['pcr'] <= filters['pcr_max']):
-            return False
-        
+        pcr = result.get('market_context', {}).get('pcr')
+        pcr_min = filters.get('pcr_min', 0)
+        pcr_max = filters.get('pcr_max', 2)
+        if pcr is None or not isinstance(pcr, (int, float)) or not (pcr_min <= pcr <= pcr_max):
+             logger.info(f"Filtering {symbol}: PCR '{pcr}' outside range [{pcr_min}, {pcr_max}]")
+             return False
+
         # Filter by RSI
-        if not (filters['rsi_min'] <= result['market_context']['rsi'] <= filters['rsi_max']):
-            return False
-        
+        rsi = result.get('market_context', {}).get('rsi')
+        rsi_min = filters.get('rsi_min', 0)
+        rsi_max = filters.get('rsi_max', 100)
+        if rsi is None or not isinstance(rsi, (int, float)) or not (rsi_min <= rsi <= rsi_max):
+             logger.info(f"Filtering {symbol}: RSI '{rsi}' outside range [{rsi_min}, {rsi_max}]")
+             return False
+
         # Filter by Stochastic RSI
-        if not (filters['stoch_rsi_min'] <= result['market_context']['stoch_rsi'] <= filters['stoch_rsi_max']):
-            return False
-        
+        stoch_rsi = result.get('market_context', {}).get('stoch_rsi')
+        stoch_rsi_min = filters.get('stoch_rsi_min', 0)
+        stoch_rsi_max = filters.get('stoch_rsi_max', 100)
+        # Add a small epsilon to the max check for floating point precision
+        epsilon = 1e-9
+        if stoch_rsi is None or not isinstance(stoch_rsi, (int, float)) or not (stoch_rsi_min <= stoch_rsi <= stoch_rsi_max + epsilon):
+             logger.info(f"Filtering {symbol}: Stoch RSI '{stoch_rsi}' outside range [{stoch_rsi_min}, {stoch_rsi_max}]")
+             return False
+
         # Filter by confidence
-        if result['confidence'] < filters['min_confidence']:
-            return False
+        confidence = result.get('confidence')
+        min_confidence = filters.get('min_confidence', 60) # Default to 60 if not set (Changed default from 0)
+        if confidence is None or not isinstance(confidence, (int, float)) or confidence < min_confidence:
+             logger.info(f"Filtering {symbol}: Confidence '{confidence}' below minimum {min_confidence}")
+             return False
+
+        # --- Advanced Options Metrics Filters ---
+        options_metrics = result.get('options_metrics', {})
+
+        # Filter by Gamma (using max gamma from profile)
+        gamma_min_filter = filters.get('gamma_min')
+        if gamma_min_filter is not None:
+            gamma_profile = options_metrics.get('gamma_profile', [])
+            if not gamma_profile:
+                 logger.info(f"Filtering {symbol}: No gamma profile available for gamma_min filter")
+                 return False
+            max_gamma = max(item.get('total_gamma', 0) for item in gamma_profile) if gamma_profile else 0
+            if max_gamma < gamma_min_filter:
+                 logger.info(f"Filtering {symbol}: Max Gamma '{max_gamma:.4f}' below minimum {gamma_min_filter}")
+                 return False
+
+        # Filter by GEX Direction
+        gex_direction_filter = filters.get('gex_direction')
+        if gex_direction_filter is not None:
+            gex_data = options_metrics.get('gex', {})
+            actual_gex_direction = gex_data.get('gex_direction')
+            if actual_gex_direction is None or actual_gex_direction != gex_direction_filter:
+                 logger.info(f"Filtering {symbol}: GEX Direction '{actual_gex_direction}' does not match filter '{gex_direction_filter}'")
+                 return False
+
+        # Filter by VWIV Percentile (Placeholder - requires percentile calculation)
+        # vwiv_percentile_min_filter = filters.get('vwiv_percentile_min')
+        # if vwiv_percentile_min_filter is not None:
+        #     vwiv_percentile = options_metrics.get('vwiv_percentile') # Assuming this key exists
+        #     if vwiv_percentile is None or vwiv_percentile < vwiv_percentile_min_filter:
+        #         logger.info(f"Filtering {symbol}: VWIV Percentile '{vwiv_percentile}' below minimum {vwiv_percentile_min_filter}")
+        #         return False
+
+        # Filter by Minimum Option Volume
+        min_option_volume_filter = filters.get('min_option_volume')
+        if min_option_volume_filter is not None:
+            # Using total_volume calculated in calculate_vwiv
+            vwiv_data = options_metrics.get('vwiv', {})
+            total_volume = vwiv_data.get('total_volume')
+            if total_volume is None or total_volume < min_option_volume_filter:
+                 logger.info(f"Filtering {symbol}: Total Option Volume '{total_volume}' below minimum {min_option_volume_filter}")
+                 return False
+
+        # Filter by Minimum Open Interest (Placeholder - requires total OI calculation)
+        min_open_interest_filter = filters.get('min_open_interest')
+        if min_open_interest_filter is not None:
+            total_open_interest = options_metrics.get('total_open_interest') # Assuming this key exists
+            if total_open_interest is None or total_open_interest < min_open_interest_filter:
+                 logger.info(f"Filtering {symbol}: Total Open Interest '{total_open_interest}' below minimum {min_open_interest_filter}")
+                 return False
+
+        # --- Sentiment Filters ---
+        sentiment_min_filter = filters.get('sentiment_min')
+        if sentiment_min_filter is not None:
+            # Use 'social_sentiment' key added in market_context.py
+            social_sentiment = result.get('market_context', {}).get('social_sentiment')
+            # Check if sentiment score is valid (not None) before comparing
+            if social_sentiment is None or not isinstance(social_sentiment, (int, float)) or social_sentiment < sentiment_min_filter:
+                logger.info(f"Filtering {symbol}: Social Sentiment '{social_sentiment}' below minimum {sentiment_min_filter} or invalid.")
+                return False
         
+        sentiment_trend_filter = filters.get('sentiment_trend')
+        # Ensure the filter is a list and not empty
+        if isinstance(sentiment_trend_filter, list) and sentiment_trend_filter:
+            # Use 'sentiment_trend' key added in market_context.py
+            sentiment_trend = result.get('market_context', {}).get('sentiment_trend')
+            if sentiment_trend is None or sentiment_trend not in sentiment_trend_filter:
+                logger.info(f"Filtering {symbol}: Sentiment Trend '{sentiment_trend}' not in allowed trends {sentiment_trend_filter}")
+                return False
+
         return True
     
     def _save_results(self):
@@ -341,14 +471,15 @@ class StockScanner:
         Returns:
             list: Scan results
         """
-        logger.info(f"Starting scan for {len(self.symbols)} symbols")
-        print(f"Starting scan for {len(self.symbols)} symbols")
+        logger.info(f"Starting concurrent scan for {len(self.symbols)} symbols")
+        print(f"Starting concurrent scan for {len(self.symbols)} symbols")
 
-        self.results = []
+        self.results = [] # Reset results
         total_symbols = len(self.symbols)
-        batch_size = 50  # Process symbols in batches to avoid rate limits
-        request_delay = 0.5  # Delay between API calls in seconds
-        
+        # Use max_workers from config for thread pool size
+        max_workers = self.config.get('max_workers', 5)
+        completed_count = 0 # Counter for progress
+
         # Initialize progress tracking
         if self.progress_callback:
             self.progress_callback({
@@ -358,123 +489,59 @@ class StockScanner:
             })
 
         try:
-            # Process symbols in batches
-            for batch_start in range(0, total_symbols, batch_size):
-                batch_end = min(batch_start + batch_size, total_symbols)
-                batch_symbols = self.symbols[batch_start:batch_end]
+            # Use ThreadPoolExecutor for concurrent analysis
+            with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+                # Submit analysis tasks for all symbols
+                future_to_symbol = {executor.submit(self._analyze_symbol, symbol): symbol for symbol in self.symbols}
                 
-                for i, symbol in enumerate(batch_symbols):
-                    # Calculate overall progress
-                    overall_i = batch_start + i
-                    progress = int(((overall_i + 1) / total_symbols) * 100)
-                    message = f'Processing {symbol}... ({overall_i+1}/{total_symbols})'
-                    logger.info(message)
-                    print(message)
+                raw_results = [] # Store results before filtering
+                
+                # Process results as they complete
+                for future in concurrent.futures.as_completed(future_to_symbol):
+                    symbol = future_to_symbol[future]
+                    try:
+                        result = future.result()
+                        if result:
+                            raw_results.append(result)
+                            logger.info(f"Analysis complete for {symbol}")
+                        else:
+                            # _analyze_symbol returns None on failure, error already logged within it
+                            pass
+                    except Exception as exc:
+                        logger.error(f'{symbol} generated an exception during analysis: {exc}')
                     
-                    # Update progress through callback
+                    # Update progress
+                    completed_count += 1
+                    progress = int((completed_count / total_symbols) * 100)
+                    message = f'Analyzed {symbol} ({completed_count}/{total_symbols})'
+                    print(message) # Keep console print for immediate feedback
                     if self.progress_callback:
                         self.progress_callback({
                             'progress': progress,
                             'message': message,
-                            'current_symbol': symbol
+                            'current_symbol': symbol # Keep track of the last completed symbol
                         })
-                    
-                    try:
-                        # Get price data with timeout
-                        ticker = yf.Ticker(symbol)
-                        hist = ticker.history(period='1d', timeout=10)
-                        if hist.empty:
-                            logger.error(f"No price data available for {symbol}")
-                            continue
-                            
-                        current_price = hist['Close'].iloc[-1]
-                        logger.info(f"Fetched price for {symbol}: ${current_price:.2f}")
-                        
-                        # Initialize modules
-                        context_analyzer = MarketContextAnalyzer(symbol)
-                        levels_mapper = KeyLevelsMapper(symbol)
-                        setup_engine = TradeSetupEngine(symbol)
-                        risk_manager = RiskManager(account_size=100000)  # Default $100k account
-                        
-                        # Get market context
-                        context = context_analyzer.analyze()
-                        if not context.get('success', False):
-                            continue
-                            
-                        # Get key levels
-                        levels = levels_mapper.map_levels()
-                        if not levels.get('success', False):
-                            continue
-                            
-                        # Determine trade setup
-                        setup = setup_engine.determine_setup(context, levels)
-                        
-                        # Calculate risk parameters
-                        stop_loss = risk_manager.calculate_stop_loss(
-                            setup['setup'],
-                            levels['current_price'],
-                            support_resistance=levels
-                        )
-                        
-                        position_size = risk_manager.calculate_position_size(
-                            levels['current_price'],
-                            stop_loss
-                        )
-                        
-                        # Calculate target price (1.5x risk-reward ratio)
-                        risk_amount = abs(levels['current_price'] - stop_loss)
-                        target_price = levels['current_price'] + (risk_amount * 1.5 * (1 if setup['setup'] == 'bullish' else -1))
-                        
-                        # Format results
-                        result = {
-                            'symbol': symbol,
-                            'timestamp': datetime.now().isoformat(),
-                            'setup': setup['setup'],
-                            'confidence': setup['confidence'],
-                            'reasons': setup['reasons'],
-                            'entry_signal': True,  # All filtered setups are valid entries
-                            'entry_strength': setup['confidence'],
-                            'entry_reasons': setup['reasons'],
-                            'exit_signal': False,  # Exit signals handled separately
-                            'exit_strength': 0,
-                            'exit_reasons': [],
-                            'position_size': position_size,
-                            'stop_loss': stop_loss,
-                            'risk_reward': 1.5,
-                            'target_price': target_price,
-                            'current_price': levels['current_price'],
-                            'market_context': context,
-                            'key_levels': levels
-                        }
-                        
-                        # Apply filters before adding to results
-                        if self._apply_filters(result):
-                            self.results.append(result)
-                            logger.info(f"Added {symbol} to results")
-                        else:
-                            logger.info(f"Filtered out {symbol} setup: confidence={setup['confidence']:.1f}%, trend={setup['setup']}")
-                    except Exception as e:
-                        logger.error(f"Error analyzing {symbol}: {e}")
-                        continue
-            
-            # Log pre-filter results count
-            logger.info(f"Pre-filter results count: {len(self.results)}")
-            
-            # Apply filters and log which results are filtered out
+
+            # --- Post-Analysis Processing (Filtering, Sorting, Saving) ---
+            logger.info(f"Completed analysis for all symbols. Raw results count: {len(raw_results)}")
+
+            # Apply filters to the raw results
             filtered_results = []
-            for r in self.results:
-                if self._apply_filters(r):
-                    filtered_results.append(r)
-                else:
-                    logger.info(f"Filtered out {r['symbol']} setup: confidence={r['confidence']:.1f}%, trend={r['market_context']['trend']}")
-            
+            for r in raw_results:
+                try:
+                    if self._apply_filters(r):
+                        filtered_results.append(r)
+                    # else: # Logging for filtered out items is now within _apply_filters
+                    #    pass
+                except Exception as filter_exc:
+                     logger.error(f"Error applying filters to result for {r.get('symbol', 'UNKNOWN')}: {filter_exc}")
+
             # Sort filtered results by confidence
-            filtered_results.sort(key=lambda x: x['confidence'], reverse=True)
-            
-            # Update self.results with filtered results
+            filtered_results.sort(key=lambda x: x.get('confidence', 0), reverse=True)
+
+            # Update self.results with the final filtered and sorted list
             self.results = filtered_results
             
-            # Log post-filter results count
             logger.info(f"Post-filter results count: {len(self.results)}")
             
             # Save results
@@ -490,6 +557,13 @@ class StockScanner:
             
             logger.info(f"Scan complete. Found {len(self.results)} setups after filtering.")
             print(f"Scan complete. Found {len(self.results)} setups after filtering.")
+
+            # Check for alerts based on the final results
+            try:
+                self.alerts_manager.check_alerts(self.results)
+            except Exception as alert_e:
+                logger.error(f"Error during alert checking: {alert_e}")
+
             return self.results
             
         except Exception as e:

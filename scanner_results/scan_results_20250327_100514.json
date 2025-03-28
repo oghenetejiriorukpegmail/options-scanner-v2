@@ -1,0 +1,2386 @@
+[
+  {
+    "symbol": "CSCO",
+    "timestamp": "2025-03-27T10:03:59.338946",
+    "setup": "neutral",
+    "confidence": 75.0,
+    "reasons": [
+      "Neutral trend (flat EMAs)",
+      "Low implied volatility (0.37)",
+      "Neutral momentum (RSI: 50.37)",
+      "Price near Max Pain (61.00)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "entry_signal": true,
+    "entry_strength": 75.0,
+    "entry_reasons": [
+      "Neutral trend (flat EMAs)",
+      "Low implied volatility (0.37)",
+      "Neutral momentum (RSI: 50.37)",
+      "Price near Max Pain (61.00)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "exit_signal": false,
+    "exit_strength": 0,
+    "exit_reasons": [],
+    "position_size": {
+      "shares": 810,
+      "position_value": 49985.09925842285,
+      "risk_per_share": 1.234199981689457,
+      "total_risk": 999.7019851684603,
+      "risk_percent": 0.9997019851684602
+    },
+    "stop_loss": 60.4757991027832,
+    "risk_reward": 1.5,
+    "target_price": 59.85869911193847,
+    "current_price": 61.709999084472656,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "bullish",
+      "momentum": "neutral",
+      "pcr": 0.5777925531914894,
+      "vwiv": 0.3669472811646156,
+      "gex": 0,
+      "rsi": 50.36877073171736,
+      "stoch_rsi": 96.57471402167262,
+      "ema10": 61.24763941010806,
+      "ema20": 61.550286288479136,
+      "ema50": 61.400635303879454,
+      "success": true
+    },
+    "key_levels": {
+      "support": [
+        61.0,
+        60.0,
+        59.0,
+        55.0,
+        53.0
+      ],
+      "resistance": [
+        62.0,
+        63.0,
+        64.0,
+        68.0
+      ],
+      "max_pain": 61.0,
+      "high_gamma": [],
+      "gex": {
+        "total_gex": 0.0,
+        "gex_by_strike": [
+          {
+            "strike": 45.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 50.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 51.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 52.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 53.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 54.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 55.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 56.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 57.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 58.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 59.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 60.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 61.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 62.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 63.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 64.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 65.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 66.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 67.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 68.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 69.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 70.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 71.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 72.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 73.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 74.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 75.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 85.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          }
+        ],
+        "gex_direction": "negative"
+      },
+      "vwiv": {
+        "vwiv": 0.38819561882201187,
+        "total_volume": 9802.0
+      },
+      "current_price": 61.709999084472656,
+      "success": true
+    }
+  },
+  {
+    "symbol": "PAYX",
+    "timestamp": "2025-03-27T10:04:01.563344",
+    "setup": "neutral",
+    "confidence": 75.0,
+    "reasons": [
+      "Neutral trend (flat EMAs)",
+      "Low implied volatility (0.20)",
+      "Neutral momentum (RSI: 55.21)",
+      "Neutral Stochastic RSI: 64.89",
+      "Price approaching Max Pain (145.00)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "entry_signal": true,
+    "entry_strength": 75.0,
+    "entry_reasons": [
+      "Neutral trend (flat EMAs)",
+      "Low implied volatility (0.20)",
+      "Neutral momentum (RSI: 55.21)",
+      "Neutral Stochastic RSI: 64.89",
+      "Price approaching Max Pain (145.00)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "exit_signal": false,
+    "exit_strength": 0,
+    "exit_reasons": [],
+    "position_size": {
+      "shares": 333,
+      "position_value": 49998.28642272949,
+      "risk_per_share": 3.0029000854492267,
+      "total_risk": 999.9657284545925,
+      "risk_percent": 0.9999657284545925
+    },
+    "stop_loss": 147.1421041870117,
+    "risk_reward": 1.5,
+    "target_price": 145.6406541442871,
+    "current_price": 150.14500427246094,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "bearish",
+      "momentum": "bullish",
+      "pcr": 1.6388888888888888,
+      "vwiv": 0.20475356309890744,
+      "gex": 0,
+      "rsi": 55.20797321809027,
+      "stoch_rsi": 64.8855142526444,
+      "ema10": 147.2767180196209,
+      "ema20": 147.55425989394922,
+      "ema50": 146.8224202657143,
+      "success": true
+    },
+    "key_levels": {
+      "support": [
+        145.0,
+        140.0,
+        135.0,
+        130.0,
+        125.0
+      ],
+      "resistance": [
+        155.0,
+        160.0,
+        165.0
+      ],
+      "max_pain": 145.0,
+      "high_gamma": [],
+      "gex": {
+        "total_gex": 0.0,
+        "gex_by_strike": [
+          {
+            "strike": 115.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 120.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 125.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 130.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 135.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 140.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 145.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 150.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 155.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 160.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 165.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 170.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 175.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 190.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 200.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          }
+        ],
+        "gex_direction": "negative"
+      },
+      "vwiv": {
+        "vwiv": 0.10352394709293755,
+        "total_volume": 4558.0
+      },
+      "current_price": 150.14500427246094,
+      "success": true
+    }
+  },
+  {
+    "symbol": "FAST",
+    "timestamp": "2025-03-27T10:04:00.160804",
+    "setup": "neutral",
+    "confidence": 68.75,
+    "reasons": [
+      "Neutral sentiment (PCR: 1.04)",
+      "Low implied volatility (0.31)",
+      "Neutral momentum (RSI: 56.06)",
+      "Neutral Stochastic RSI: 47.14",
+      "Price approaching Max Pain (75.00)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "entry_signal": true,
+    "entry_strength": 68.75,
+    "entry_reasons": [
+      "Neutral sentiment (PCR: 1.04)",
+      "Low implied volatility (0.31)",
+      "Neutral momentum (RSI: 56.06)",
+      "Neutral Stochastic RSI: 47.14",
+      "Price approaching Max Pain (75.00)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "exit_signal": false,
+    "exit_strength": 0,
+    "exit_reasons": [],
+    "position_size": {
+      "shares": 646,
+      "position_value": 49935.80197143555,
+      "risk_per_share": 1.5460000610351585,
+      "total_risk": 998.7160394287124,
+      "risk_percent": 0.9987160394287123
+    },
+    "stop_loss": 75.75400299072265,
+    "risk_reward": 1.5,
+    "target_price": 74.98100296020507,
+    "current_price": 77.30000305175781,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "neutral",
+      "momentum": "neutral",
+      "pcr": 1.037037037037037,
+      "vwiv": 0.30561072482638885,
+      "gex": 0,
+      "rsi": 56.05765811891743,
+      "stoch_rsi": 47.13678059635763,
+      "ema10": 76.51608558662998,
+      "ema20": 76.14954970282571,
+      "ema50": 75.74387749551485,
+      "success": true
+    },
+    "key_levels": {
+      "support": [
+        75.0,
+        72.5,
+        70.0,
+        65.0
+      ],
+      "resistance": [
+        77.5,
+        80.0,
+        82.5,
+        85.0
+      ],
+      "max_pain": 75.0,
+      "high_gamma": [],
+      "gex": {
+        "total_gex": 0.0,
+        "gex_by_strike": [
+          {
+            "strike": 60.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 65.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 67.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 70.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 72.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 75.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 77.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 80.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 82.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 85.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 90.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 100.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          }
+        ],
+        "gex_direction": "negative"
+      },
+      "vwiv": {
+        "vwiv": 0.3563748075284091,
+        "total_volume": 165.0
+      },
+      "current_price": 77.30000305175781,
+      "success": true
+    }
+  },
+  {
+    "symbol": "AMAT",
+    "timestamp": "2025-03-27T10:03:58.687270",
+    "setup": "bearish",
+    "confidence": 64.28571428571429,
+    "reasons": [
+      "Strong bearish trend (EMA alignment)",
+      "Bearish sentiment (PCR: 1.42)",
+      "Bearish momentum (RSI: 37.65)",
+      "Neutral Stochastic RSI: 43.32",
+      "Price approaching resistance (152.50)"
+    ],
+    "entry_signal": true,
+    "entry_strength": 64.28571428571429,
+    "entry_reasons": [
+      "Strong bearish trend (EMA alignment)",
+      "Bearish sentiment (PCR: 1.42)",
+      "Bearish momentum (RSI: 37.65)",
+      "Neutral Stochastic RSI: 43.32",
+      "Price approaching resistance (152.50)"
+    ],
+    "exit_signal": false,
+    "exit_strength": 0,
+    "exit_reasons": [],
+    "position_size": {
+      "shares": 189,
+      "position_value": 28115.638961791992,
+      "risk_per_share": 5.265005493164068,
+      "total_risk": 995.0860382080089,
+      "risk_percent": 0.9950860382080089
+    },
+    "stop_loss": 154.025,
+    "risk_reward": 1.5,
+    "target_price": 140.86248626708982,
+    "current_price": 148.75999450683594,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "neutral",
+      "momentum": "neutral",
+      "pcr": 1.4166666666666667,
+      "vwiv": 0.5848142875019989,
+      "gex": 0,
+      "rsi": 37.64872046150482,
+      "stoch_rsi": 43.324289221145975,
+      "ema10": 152.4998329997564,
+      "ema20": 155.27240793375142,
+      "ema50": 162.79761141457752,
+      "success": true
+    },
+    "key_levels": {
+      "support": [
+        145.0
+      ],
+      "resistance": [
+        152.5,
+        155.0,
+        162.5,
+        165.0,
+        195.0
+      ],
+      "max_pain": 152.5,
+      "high_gamma": [],
+      "gex": {
+        "total_gex": 0.0,
+        "gex_by_strike": [
+          {
+            "strike": 90.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 100.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 105.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 110.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 115.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 120.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 125.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 130.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 132.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 133.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 134.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 135.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 136.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 137.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 138.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 139.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 140.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 141.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 142.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 143.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 144.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 145.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 146.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 147.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 148.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 149.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 150.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 152.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 155.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 157.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 160.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 162.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 165.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 167.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 170.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 172.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 175.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 177.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 180.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 185.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 190.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 195.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 200.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 205.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 210.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 215.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 220.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 225.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 230.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          }
+        ],
+        "gex_direction": "negative"
+      },
+      "vwiv": {
+        "vwiv": 0.5017907898606463,
+        "total_volume": 1653.0
+      },
+      "current_price": 148.75999450683594,
+      "success": true
+    }
+  },
+  {
+    "symbol": "MSFT",
+    "timestamp": "2025-03-27T10:04:00.937905",
+    "setup": "bearish",
+    "confidence": 64.28571428571429,
+    "reasons": [
+      "Strong bearish trend (EMA alignment)",
+      "Bearish sentiment (PCR: 1.25)",
+      "Neutral momentum (RSI: 45.81)",
+      "Price near resistance (395.00)"
+    ],
+    "entry_signal": true,
+    "entry_strength": 64.28571428571429,
+    "entry_reasons": [
+      "Strong bearish trend (EMA alignment)",
+      "Bearish sentiment (PCR: 1.25)",
+      "Neutral momentum (RSI: 45.81)",
+      "Price near resistance (395.00)"
+    ],
+    "exit_signal": false,
+    "exit_strength": 0,
+    "exit_reasons": [],
+    "position_size": {
+      "shares": 112,
+      "position_value": 43685.5986328125,
+      "risk_per_share": 8.900012207031239,
+      "total_risk": 996.8013671874987,
+      "risk_percent": 0.9968013671874988
+    },
+    "stop_loss": 398.95,
+    "risk_reward": 1.5,
+    "target_price": 376.6999694824219,
+    "current_price": 390.04998779296875,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "neutral",
+      "momentum": "neutral",
+      "pcr": 1.2504399859204505,
+      "vwiv": 0.9720216636254355,
+      "gex": 0,
+      "rsi": 45.80527171913959,
+      "stoch_rsi": 75.62627279928361,
+      "ema10": 390.10185555643125,
+      "ema20": 392.02860876228203,
+      "ema50": 401.7132516850677,
+      "success": true
+    },
+    "key_levels": {
+      "support": [
+        385.0,
+        380.0,
+        375.0,
+        325.0
+      ],
+      "resistance": [
+        395.0,
+        400.0,
+        405.0,
+        410.0
+      ],
+      "max_pain": 390.0,
+      "high_gamma": [],
+      "gex": {
+        "total_gex": 0.0,
+        "gex_by_strike": [
+          {
+            "strike": 230.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 240.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 250.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 260.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 270.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 280.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 290.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 300.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 310.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 315.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 320.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 325.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 330.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 332.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 335.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 337.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 340.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 342.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 345.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 347.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 350.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 352.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 355.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 357.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 360.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 362.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 365.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 367.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 370.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 372.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 375.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 377.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 380.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 382.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 385.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 387.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 390.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 392.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 395.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 397.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 400.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 402.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 405.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 407.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 410.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 412.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 415.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 417.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 420.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 422.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 425.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 427.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 430.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 432.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 435.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 437.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 440.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 445.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 450.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 455.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 460.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 465.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 470.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 475.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 480.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 485.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 490.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 495.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 500.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 505.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 510.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 515.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 520.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 525.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 550.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 560.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          }
+        ],
+        "gex_direction": "negative"
+      },
+      "vwiv": {
+        "vwiv": 0.7100200070880767,
+        "total_volume": 21794.0
+      },
+      "current_price": 390.04998779296875,
+      "success": true
+    }
+  },
+  {
+    "symbol": "QCOM",
+    "timestamp": "2025-03-27T10:04:02.252581",
+    "setup": "neutral",
+    "confidence": 62.5,
+    "reasons": [
+      "Moderate implied volatility (0.43)",
+      "Neutral momentum (RSI: 47.74)",
+      "Neutral Stochastic RSI: 71.87",
+      "Price near Max Pain (157.50)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "entry_signal": true,
+    "entry_strength": 62.5,
+    "entry_reasons": [
+      "Moderate implied volatility (0.43)",
+      "Neutral momentum (RSI: 47.74)",
+      "Neutral Stochastic RSI: 71.87",
+      "Price near Max Pain (157.50)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "exit_signal": false,
+    "exit_strength": 0,
+    "exit_reasons": [],
+    "position_size": {
+      "shares": 316,
+      "position_value": 49894.821350097656,
+      "risk_per_share": 3.157900085449228,
+      "total_risk": 997.896427001956,
+      "risk_percent": 0.997896427001956
+    },
+    "stop_loss": 154.7371041870117,
+    "risk_reward": 1.5,
+    "target_price": 153.1581541442871,
+    "current_price": 157.89500427246094,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "bullish",
+      "momentum": "neutral",
+      "pcr": 0.6352339181286549,
+      "vwiv": 0.43176635852122164,
+      "gex": 0,
+      "rsi": 47.73753790250745,
+      "stoch_rsi": 71.87437013349151,
+      "ema10": 157.98942689868326,
+      "ema20": 158.44588795807832,
+      "ema50": 160.40339458525912,
+      "success": true
+    },
+    "key_levels": {
+      "support": [
+        157.5,
+        155.0,
+        152.5,
+        150.0,
+        140.0
+      ],
+      "resistance": [
+        160.0,
+        162.5,
+        165.0,
+        167.5,
+        170.0
+      ],
+      "max_pain": 157.5,
+      "high_gamma": [],
+      "gex": {
+        "total_gex": 0.0,
+        "gex_by_strike": [
+          {
+            "strike": 100.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 110.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 115.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 120.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 125.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 130.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 133.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 134.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 135.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 136.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 137.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 138.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 139.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 140.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 141.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 142.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 143.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 144.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 145.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 146.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 147.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 148.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 149.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 150.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 152.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 155.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 157.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 160.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 162.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 165.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 167.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 170.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 172.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 175.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 177.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 180.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 185.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 190.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 195.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 200.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 205.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 215.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          }
+        ],
+        "gex_direction": "negative"
+      },
+      "vwiv": {
+        "vwiv": 0.5327754860968628,
+        "total_volume": 4474.0
+      },
+      "current_price": 157.89500427246094,
+      "success": true
+    }
+  },
+  {
+    "symbol": "ADBE",
+    "timestamp": "2025-03-27T10:03:58.047939",
+    "setup": "weak_neutral",
+    "confidence": 56.25,
+    "reasons": [
+      "Low implied volatility (0.38)",
+      "Neutral Stochastic RSI: 73.34",
+      "Price near Max Pain (395.00)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "entry_signal": true,
+    "entry_strength": 56.25,
+    "entry_reasons": [
+      "Low implied volatility (0.38)",
+      "Neutral Stochastic RSI: 73.34",
+      "Price near Max Pain (395.00)",
+      "GEX near zero indicating potential breakout"
+    ],
+    "exit_signal": false,
+    "exit_strength": 0,
+    "exit_reasons": [],
+    "position_size": {
+      "shares": 126,
+      "position_value": 49954.58953857422,
+      "risk_per_share": 7.929299926757835,
+      "total_risk": 999.0917907714872,
+      "risk_percent": 0.9990917907714872
+    },
+    "stop_loss": 388.5356964111328,
+    "risk_reward": 1.5,
+    "target_price": 384.5710464477539,
+    "current_price": 396.4649963378906,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "bullish",
+      "momentum": "neutral",
+      "pcr": 0.4031653477717618,
+      "vwiv": 0.3821775295917554,
+      "gex": 0,
+      "rsi": 39.50447821115837,
+      "stoch_rsi": 73.34046579556312,
+      "ema10": 399.9988328906495,
+      "ema20": 410.348414771754,
+      "ema50": 428.8718433735587,
+      "success": true
+    },
+    "key_levels": {
+      "support": [
+        395.0,
+        392.5,
+        390.0,
+        385.0,
+        375.0
+      ],
+      "resistance": [
+        405.0,
+        412.5,
+        415.0,
+        440.0
+      ],
+      "max_pain": 395.0,
+      "high_gamma": [],
+      "gex": {
+        "total_gex": 0.0,
+        "gex_by_strike": [
+          {
+            "strike": 300.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 305.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 310.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 315.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 320.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 325.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 330.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 335.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 337.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 340.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 342.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 345.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 347.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 350.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 352.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 355.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 357.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 360.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 362.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 365.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 367.5,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 370.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 372.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 375.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 377.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 380.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 382.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 385.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 387.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 390.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 392.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 395.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 397.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 400.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 402.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 405.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 407.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 410.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 412.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 415.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 417.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 420.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 422.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 425.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 427.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 430.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 432.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 435.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 437.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 440.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 442.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 445.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 447.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 450.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 452.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 455.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 457.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 460.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 462.5,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 465.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 470.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 475.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 480.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 485.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 490.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 495.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 500.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 505.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 510.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 515.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 520.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 525.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 530.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 535.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0
+          },
+          {
+            "strike": 540.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 545.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 550.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 555.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 560.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 565.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 570.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 575.0,
+            "total_gex": 0.0,
+            "call_gex": 0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 580.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          },
+          {
+            "strike": 585.0,
+            "total_gex": 0.0,
+            "call_gex": 0.0,
+            "put_gex": 0.0
+          }
+        ],
+        "gex_direction": "negative"
+      },
+      "vwiv": {
+        "vwiv": 0.43883588448583627,
+        "total_volume": 7691.0
+      },
+      "current_price": 396.4649963378906,
+      "success": true
+    }
+  }
+]

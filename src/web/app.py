@@ -12,6 +12,7 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from src.modules.scanner import StockScanner
+from src.modules.alerts import AlertsManager # Added import
 
 class ProgressManager:
     def __init__(self):
@@ -63,6 +64,8 @@ def create_app():
 
     progress_manager = ProgressManager()
     scanner_lock = threading.Lock()
+    # Instantiate AlertsManager - it loads alerts from user_alerts.json
+    alerts_manager = AlertsManager()
 
     def progress_callback(data):
         """Callback function for scanner progress updates"""
@@ -146,9 +149,18 @@ def create_app():
                             last_message = current_message
 
                             # Log progress to console
-                            print(f"Scan progress: {current_progress}% - {current_message}")
+                            # print(f"Scan progress: {current_progress}% - {current_message}") # Reduce console noise
 
-                        time.sleep(0.5)
+                        # Check for and send any pending browser alerts
+                        pending_alerts = alerts_manager.get_pending_browser_alerts()
+                        for alert_data in pending_alerts:
+                             try:
+                                  yield f"data: {json.dumps(alert_data)}\n\n" # Send alert data
+                                  print(f"Sent browser alert: {alert_data.get('name')} for {alert_data.get('symbol')}")
+                             except Exception as e:
+                                  print(f"Error sending browser alert data: {e}")
+
+                        time.sleep(0.5) # Check queue every 0.5 seconds
 
                     # Send final results
                     status = progress_manager.get_status()
@@ -177,6 +189,7 @@ def create_app():
             scanner = StockScanner(config_file='config.json')
             result = scanner._analyze_symbol(symbol)
             if result:
+                # Result already contains 'historical_chart_data' added in _analyze_symbol
                 return jsonify({'success': True, 'result': result})
             return jsonify({'success': False, 'error': f'No analysis results for {symbol}'})
         except Exception as e:
@@ -221,6 +234,7 @@ def create_app():
                     'vomma': vomma,
                     'high_gamma_strikes': metrics.get('high_gamma_strikes', []),
                     'gex': metrics.get('gex', {}).get('total_gex', 0),
+                    'gex_by_strike': metrics.get('gex', {}).get('gex_by_strike', []), # Added GEX profile
                     'vwiv': metrics.get('vwiv', {}).get('vwiv', 0)
                 }
                 
@@ -231,5 +245,63 @@ def create_app():
             return jsonify({'success': False, 'error': f'Could not calculate metrics for {symbol}'})
         except Exception as e:
             return jsonify({'success': False, 'error': str(e)})
+
+    # --- Alert Management API Endpoints ---
+
+    @app.route('/api/alerts', methods=['GET'])
+    def get_alerts():
+        """Returns the list of user-defined alerts."""
+        # Return a copy to avoid modifying the original list directly
+        return jsonify({'success': True, 'alerts': list(alerts_manager.user_alerts)})
+
+    @app.route('/api/alerts', methods=['POST'])
+    def add_alert():
+        """Creates a new alert rule."""
+        data = request.get_json()
+        if not data:
+            return jsonify({'success': False, 'error': 'Invalid JSON payload'}), 400
+            
+        name = data.get('name')
+        conditions = data.get('conditions')
+        methods = data.get('methods')
+
+        if not name or not conditions or not methods:
+            return jsonify({'success': False, 'error': 'Missing required fields: name, conditions, methods'}), 400
+
+        try:
+            new_alert = alerts_manager.create_alert(name, conditions, methods)
+            if new_alert:
+                 # Return the created alert, including its generated ID
+                 return jsonify({'success': True, 'alert': new_alert}), 201
+            else:
+                 # create_alert might return None if validation fails
+                 return jsonify({'success': False, 'error': 'Failed to create alert due to invalid data'}), 400
+        except Exception as e:
+            return jsonify({'success': False, 'error': f'Error creating alert: {str(e)}'}), 500
+
+    @app.route('/api/alerts/<alert_id>', methods=['DELETE'])
+    def delete_alert_route(alert_id):
+        """Deletes an alert rule by its ID."""
+        try:
+            deleted = alerts_manager.delete_alert(alert_id)
+            if deleted:
+                return jsonify({'success': True, 'message': f'Alert {alert_id} deleted'})
+            else:
+                return jsonify({'success': False, 'error': f'Alert {alert_id} not found'}), 404
+        except Exception as e:
+            return jsonify({'success': False, 'error': f'Error deleting alert: {str(e)}'}), 500
+
+    # TODO: Add PUT endpoint for updating alerts (e.g., toggling is_active) if needed
+    # @app.route('/api/alerts/<alert_id>', methods=['PUT'])
+    # def update_alert_route(alert_id): ...
+
+    @app.route('/api/alerts/history', methods=['GET'])
+    def get_alert_history_route():
+        """Returns the history of triggered alerts."""
+        try:
+            history = alerts_manager.get_alert_history()
+            return jsonify({'success': True, 'history': history})
+        except Exception as e:
+            return jsonify({'success': False, 'error': f'Error getting alert history: {str(e)}'}), 500
 
     return app

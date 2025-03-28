@@ -8,12 +8,14 @@
     "rsi_max": 100,
     "stoch_rsi_min": 0,
     "stoch_rsi_max": 100,
-    "min_confidence": 20,
+    "min_confidence": 60,
     "gamma_min": 0.1,
-    "gex_direction": ["positive", "negative"],
-    "vwiv_percentile_min": 0,
-    "vwiv_percentile_max": 100,
-    "high_gamma_count_min": 0
+    "gex_direction": "positive",
+    "vwiv_percentile_min": 50,
+    "sentiment_min": 0.6,
+    "sentiment_trend": ["improving", "stable"],
+    "min_option_volume": 1000,
+    "min_open_interest": 500
   },
   "options_metrics": {
     "enabled": true,
@@ -22,16 +24,18 @@
     "cache_expiry_hours": 24
   },
   "sentiment_analysis": {
-    "enabled": false,
-    "sources": ["twitter", "reddit", "stocktwits"],
+    "enabled": true,
+    "sources": [],
     "lookback_days": 7,
     "min_sentiment_score": 0.5,
-    "twitter_api_key": "",
-    "reddit_api_key": "",
-    "stocktwits_api_key": ""
+    "twitter_api_key": "0Uea7qvOxTl2Ph7J893P60NlI",
+    "twitter_api_secret": "e26Frzw5ubIijh9sDUSWExa778pakQVxRDyRhUv5TniT2DSTR7",
+    "twitter_bearer_token": null,
+    "reddit_api_key": null,
+    "stocktwits_access_token": null
   },
   "alerts": {
-    "enabled": false,
+    "enabled": true,
     "check_interval_seconds": 300,
     "notification_methods": ["browser"],
     "email_settings": {
@@ -40,7 +44,33 @@
       "username": "",
       "password": "",
       "recipients": []
-    }
+    },
+    "user_alerts": [
+      {
+        "name": "Strong Bullish TSLA",
+        "conditions": {
+          "symbol": ["TSLA"],
+          "setup": ["bullish"],
+          "min_confidence": 80,
+          "rsi_max": 60
+        },
+        "methods": ["browser", "email"]
+      },
+      {
+        "name": "High Confidence Bearish",
+        "conditions": {
+          "setup": ["bearish"],
+          "min_confidence": 75
+        },
+        "methods": ["browser"]
+      }
+    ]
+  },
+  "ibkr": {
+    "host": "127.0.0.1",
+    "port": 7497,
+    "client_id": 1,
+    "timeout_seconds": 10
   },
   "output_dir": "scanner_results",
   "fmp_api_key": "O2REndZGRE2gZZCf2gU9xBjdjboP18yY"

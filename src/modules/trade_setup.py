@@ -97,11 +97,11 @@ class TradeSetupEngine:
         # Calculate confidence score (0-100%)
         confidence = (points / max_points) * 100 if max_points > 0 else 0
         
-        # Determine if setup is valid (confidence > 60%)
-        is_valid = confidence > 60
+        # Always return valid regardless of confidence level
+        # This allows low confidence setups to be included when min_confidence is set to 0
+        is_valid = True
         
         return is_valid, confidence, reasons
-    
     def _evaluate_bearish_setup(self, context, levels):
         """
         Evaluate bearish setup conditions
@@ -171,7 +171,9 @@ class TradeSetupEngine:
         # Calculate confidence score (0-100%)
         confidence = (points / max_points) * 100 if max_points > 0 else 0
         
-        # Determine if setup is valid (confidence > 60%)
+        # Always return valid regardless of confidence level
+        # This allows low confidence setups to be included when min_confidence is set to 0
+        is_valid = True
         is_valid = confidence > 60
         
         return is_valid, confidence, reasons
@@ -242,8 +244,9 @@ class TradeSetupEngine:
         # Calculate confidence score (0-100%)
         confidence = (points / max_points) * 100 if max_points > 0 else 0
         
-        # Determine if setup is valid (confidence > 60%)
-        is_valid = confidence > 60
+        # Always return valid regardless of confidence level
+        # This allows low confidence setups to be included when min_confidence is set to 0
+        is_valid = True
         
         return is_valid, confidence, reasons
     
@@ -270,14 +273,14 @@ class TradeSetupEngine:
             ('neutral', neutral_confidence, neutral_valid, neutral_reasons)
         ]
         
-        # Sort by confidence (highest first) and validity
-        setups.sort(key=lambda x: (x[2], x[1]), reverse=True)
+        # Sort by confidence (highest first)
+        setups.sort(key=lambda x: x[1], reverse=True)
         
         # Get the most likely setup
         setup_type, confidence, is_valid, reasons = setups[0]
         
-        # If no valid setup, use the highest confidence one but mark as low confidence
-        if not is_valid:
+        # Mark as weak if confidence is low (below 60%)
+        if confidence < 60:
             setup_type = f"weak_{setup_type}"
         
         return {

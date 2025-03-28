@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/static/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@^2.0.1"></script> <!-- Added Zoom Plugin -->
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -28,6 +29,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#analysis">Analysis</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#alerts">Alerts</a>
                     </li>
                 </ul>
                 <div class="ms-auto">
@@ -52,7 +56,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="card mb-3">
-                                        <div class="card-header bg-success text-white">
+                                        <div id="bullishListCardHeader" class="card-header bg-success text-white list-filter-header"> <!-- Added ID and class -->
                                             <h6 class="mb-0">Bullish Setups</h6>
                                         </div>
                                         <div class="card-body">
@@ -63,7 +67,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card mb-3">
-                                        <div class="card-header bg-danger text-white">
+                                        <div id="bearishListCardHeader" class="card-header bg-danger text-white list-filter-header"> <!-- Added ID and class -->
                                             <h6 class="mb-0">Bearish Setups</h6>
                                         </div>
                                         <div class="card-body">
@@ -74,7 +78,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card mb-3">
-                                        <div class="card-header bg-secondary text-white">
+                                        <div id="neutralListCardHeader" class="card-header bg-secondary text-white list-filter-header"> <!-- Added ID and class -->
                                             <h6 class="mb-0">Neutral Setups</h6>
                                         </div>
                                         <div class="card-body">
@@ -92,7 +96,7 @@
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header bg-primary text-white">
+                        <div id="resultsCardHeader" class="card-header bg-primary text-white list-filter-header"> <!-- Added ID and class -->
                             <h5 class="mb-0">Recent Scan Results</h5>
                         </div>
                         <div class="card-body">
@@ -102,18 +106,19 @@
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table class="table table-striped table-hover">
+                                <table class="table table-striped table-hover table-sortable"> <!-- Added table-sortable class -->
                                     <thead>
                                         <tr>
-                                            <th>Symbol</th>
-                                            <th>Setup</th>
-                                            <th>Confidence</th>
-                                            <th>Entry Signal</th>
-                                            <th>Current Price</th>
-                                            <th>Target Price</th>
-                                            <th>Stop Loss</th>
-                                            <th>Risk/Reward</th>
-                                            <th>Action</th>
+                                            <!-- Added data-sort-key and class for styling/JS -->
+                                            <th data-sort-key="symbol" class="sortable-header">Symbol</th>
+                                            <th data-sort-key="setup" class="sortable-header">Setup</th>
+                                            <th data-sort-key="confidence" class="sortable-header">Confidence</th>
+                                            <th data-sort-key="entry_signal" class="sortable-header">Entry Signal</th>
+                                            <th data-sort-key="current_price" class="sortable-header">Current Price</th>
+                                            <th data-sort-key="target_price" class="sortable-header">Target Price</th>
+                                            <th data-sort-key="stop_loss" class="sortable-header">Stop Loss</th>
+                                            <th data-sort-key="risk_reward" class="sortable-header">Risk/Reward</th>
+                                            <th>Action</th> <!-- Action column is not sortable -->
                                         </tr>
                                     </thead>
                                     <tbody id="resultsTable">
@@ -198,6 +203,35 @@
                                             <label for="symbolInput" class="form-label">Symbol (optional)</label>
                                             <input type="text" class="form-control" id="symbolInput" placeholder="e.g., TSLA">
                                         </div>
+                                    </div>
+                                </div>
+                                <!-- New Row for Sentiment Filters -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label for="sentimentMin" class="form-label">Minimum Sentiment Score (0-1)</label>
+                                            <input type="number" class="form-control" id="sentimentMin" min="0" max="1" step="0.1" value="0.6">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Allowed Sentiment Trend</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="improving" id="sentimentImproving" checked>
+                                                <label class="form-check-label" for="sentimentImproving">Improving</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="stable" id="sentimentStable" checked>
+                                                <label class="form-check-label" for="sentimentStable">Stable</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="declining" id="sentimentDeclining">
+                                                <label class="form-check-label" for="sentimentDeclining">Declining</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!-- Placeholder for future filters -->
                                     </div>
                                 </div>
                                 <div class="text-end">
@@ -342,6 +376,20 @@
                                                 <h5 class="mb-0">Options Metrics</h5>
                                             </div>
                                             <div class="card-body">
+                                                <!-- Numerical Metrics Summary -->
+                                                <div class="row mb-3">
+                                                     <div class="col-md-4">
+                                                          <p><strong>Total GEX:</strong> <span id="gexValue">N/A</span></p>
+                                                     </div>
+                                                     <div class="col-md-4">
+                                                          <p><strong>VWIV:</strong> <span id="vwivValue">N/A</span></p>
+                                                     </div>
+                                                     <div class="col-md-4">
+                                                          <p><strong>Max Pain:</strong> <span id="maxPainValue2">N/A</span></p> <!-- Use different ID from Key Levels section -->
+                                                     </div>
+                                                </div>
+                                                <hr>
+                                                <!-- Chart Rows -->
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="card mb-3">
@@ -366,8 +414,129 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- New Row for GEX Chart -->
+                                        <div class="row">
+                                             <div class="col-md-12">
+                                                  <div class="card mb-3">
+                                                       <div class="card-header">
+                                                            <h6 class="mb-0">GEX Profile (Gamma Exposure)</h6>
+                                                       </div>
+                                                       <div class="card-body">
+                                                            <canvas id="gexChart" height="250"></canvas>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts Section -->
+        <section id="alerts" class="mb-5 d-none">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Manage Alerts</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Form to Add New Alert -->
+                            <div class="card mb-4">
+                                <div class="card-header">Add New Alert</div>
+                                <div class="card-body">
+                                    <form id="addAlertForm">
+                                        <div class="mb-3">
+                                            <label for="alertName" class="form-label">Alert Name</label>
+                                            <input type="text" class="form-control" id="alertName" required>
+                                        </div>
+                                        <!-- Condition Fields -->
+                                        <div class="row mb-3">
+                                             <div class="col-md-4">
+                                                  <label for="alertSymbol" class="form-label">Symbol(s)</label>
+                                                  <input type="text" class="form-control" id="alertSymbol" placeholder="e.g., TSLA, AAPL (comma-sep)">
+                                                  <small class="form-text text-muted">Optional. Leave blank for any symbol.</small>
+                                             </div>
+                                             <div class="col-md-4">
+                                                  <label class="form-label">Setup Type(s)</label>
+                                                  <div class="form-check form-check-inline">
+                                                       <input class="form-check-input alert-setup-type" type="checkbox" value="bullish" id="alertSetupBullish">
+                                                       <label class="form-check-label" for="alertSetupBullish">Bullish</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline">
+                                                       <input class="form-check-input alert-setup-type" type="checkbox" value="bearish" id="alertSetupBearish">
+                                                       <label class="form-check-label" for="alertSetupBearish">Bearish</label>
+                                                  </div>
+                                                   <div class="form-check form-check-inline">
+                                                       <input class="form-check-input alert-setup-type" type="checkbox" value="neutral" id="alertSetupNeutral">
+                                                       <label class="form-check-label" for="alertSetupNeutral">Neutral</label>
+                                                  </div>
+                                                  <small class="form-text text-muted d-block">Optional. Leave unchecked for any setup.</small>
+                                             </div>
+                                             <div class="col-md-4">
+                                                  <label for="alertMinConfidence" class="form-label">Min Confidence (%)</label>
+                                                  <input type="number" class="form-control" id="alertMinConfidence" min="0" max="100" step="1" placeholder="e.g., 75">
+                                                  <small class="form-text text-muted">Optional. Leave blank for any confidence.</small>
+                                             </div>
+                                             <!-- Add more condition fields here (e.g., RSI range) -->
+                                        </div>
+                                        <!-- Notification Methods -->
+                                        <div class="mb-3">
+                                             <label class="form-label">Notification Methods</label>
+                                             <div class="form-check">
+                                                 <input class="form-check-input" type="checkbox" value="browser" id="alertMethodBrowser" checked>
+                                                 <label class="form-check-label" for="alertMethodBrowser">Browser</label>
+                                             </div>
+                                             <div class="form-check">
+                                                 <input class="form-check-input" type="checkbox" value="email" id="alertMethodEmail">
+                                                 <label class="form-check-label" for="alertMethodEmail">Email</label>
+                                             </div>
+                                             <!-- Add webhook checkbox if implemented -->
+                                        </div>
+                                        <button type="submit" class="btn btn-success">Add Alert</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Table of Existing Alerts -->
+                            <h6>Existing Alerts</h6>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Conditions</th>
+                                            <th>Methods</th>
+                                            <th>Created</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="alertsTableBody">
+                                        <!-- Alert rows will be populated here -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Alert History Table -->
+                            <h6 class="mt-4">Triggered Alert History (Last 100)</h6>
+                             <div class="table-responsive">
+                                <table class="table table-sm table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>Alert Name</th>
+                                            <th>Symbol</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="alertHistoryTableBody">
+                                        <!-- History rows will be populated here -->
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

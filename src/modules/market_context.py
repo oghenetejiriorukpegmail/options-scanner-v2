@@ -10,6 +10,7 @@ import pandas as pd
 import yfinance as yf
 from ta.trend import EMAIndicator
 from ta.momentum import RSIIndicator, StochasticOscillator
+from src.modules.sentiment_analysis import SentimentAnalyzer # Added import
 
 logger = logging.getLogger(__name__)
 
@@ -234,18 +235,39 @@ class MarketContextAnalyzer:
         momentum = self._determine_momentum()
         
         latest = self.data.iloc[-1]
+
+        # Add sentiment analysis
+        sentiment_analyzer = SentimentAnalyzer(self.symbol)
+        sentiment_data = sentiment_analyzer.analyze_sentiment()
+        if sentiment_data is None:
+            logger.warning(f"Sentiment analysis failed for {self.symbol}")
+            sentiment_data = { # Default values if analysis fails
+                'overall_score': None,
+                'twitter_score': None,
+                'reddit_score': None,
+                'stocktwits_score': None,
+                'trend': 'unknown'
+            }
         
-        return {
+        context = {
             'trend': trend,
-            'sentiment': sentiment,
+            'sentiment': sentiment, # Existing sentiment based on PCR/IV
             'momentum': momentum,
             'pcr': self.pcr,
             'vwiv': self.vwiv,
-            'gex': self.gex,
+            'gex': self.gex, # Placeholder GEX
             'rsi': latest['rsi'],
             'stoch_rsi': latest['stoch_rsi'],
             'ema10': latest['ema10'],
             'ema20': latest['ema20'],
             'ema50': latest['ema50'],
+            'social_sentiment': sentiment_data['overall_score'], # Added social sentiment score
+            'sentiment_breakdown': { # Added breakdown
+                'twitter': sentiment_data['twitter_score'],
+                'reddit': sentiment_data['reddit_score'],
+                'stocktwits': sentiment_data['stocktwits_score']
+            },
+            'sentiment_trend': sentiment_data['trend'], # Added sentiment trend
             'success': True
         }
+        return context
